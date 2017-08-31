@@ -70,25 +70,17 @@
 
 
 //스크롤시 top버튼
-$(function(){
-	$(".btn_top_move").on("topBtnClick", function() {//170724fix top버튼
-		$(this).off("click").on("click", function() {
-			$('html, body').stop().animate({scrollTop: 0}, 250);
-			return false;
-		});
-	}).trigger("topBtnClick");//end
-	//$(".btn_top_move").triggr("topBtnClick");//재사용시
-
-});
-
 $(window).on('scrollend', function(){
 	var posF = $(document).scrollTop();
 	var flag = true;
 	var end = 400;
+	var aniTime = 250;
 	if( posF > end){
 		flag = false;
 		$('body').append('<span class="btn_top_move"></span>');
-		$(".btn_top_move").triggr("topBtnClick");
+		$(".btn_top_move").off('.topBtn').on("click.topBtn", function(){
+			$('body, html').stop().animate({scrollTop: 0}, aniTime);
+		});
 		if ( $('.btn_top_move:visible').length == 0 ) {
 			$(".btn_top_move").css("display","block");
 		}

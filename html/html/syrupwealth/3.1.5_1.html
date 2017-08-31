@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>통장만들기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+    <!--## processBar 170724fix 텍스트 수정##-->
+	<div class="processBar">
+		<span class="text">신청서를 입력해주세요.</span>
+		<div class="step">
+			<i class="bl_step"></i>
+			<i class="bl_step on"></i>
+			<i class="bl_step"></i>
+		</div>
+	</div>
+    <!--##// processBar ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="note group">
+			<div class="sub">
+				<h2 class="title pb0">직장이 있으신가요?</h2>
+				<div class="inline_table col2 mt20">
+					<div class="cell">
+						<span class="radio focus">
+							<input type="radio" id="r1" name="rr" checked="">
+							<label for="r1"><span></span>네</label>
+						</span>
+						<p class="ex">예) 회사원,자영업</p>
+					</div>
+					<div class="cell">
+						<!--
+							디자인상의 이슈로 checked된 상태일 경우
+							input에 checked 속성 추가 후
+							radio 클래스를 가진 태그에 focus 클래스 추가
+						-->
+						<span class="radio focus">
+							<input type="radio" id="r2" name="rr" checked="">
+							<label for="r2"><span></span>아니오</label>
+						</span>
+						<p class="ex">예) 주부, 학생, 기타</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 직장인이 아닐경우 이 섹션 자체를 숨겨 주세요. -->
+			<div class="sub pb25">
+				<h2 class="title pb0">
+					직장 정보를 입력해주세요.
+				</h2>
+				<span class="input" style="width:100%;">
+					<label><input type="text" placeholder="직장명"></label>
+				</span>
+			</div>
+			<!--// 직장인이 아닐경우 이 섹션 자체를 숨겨 주세요. -->
+
+		</div>
+
+		<div class="group">
+
+			<div class="sub">
+				<h2 class="title pb0">거래목적</h2>
+				<div class="mt15">
+					<!-- 170719fix select태그 에서 div태그로 변경 -->
+					<span class="div_select" style="width:100%;">
+						<a href="#" id="optionDefault2" class="">거래 목적 선택</a>
+					</span>
+					<!--// 170719fix select태그 에서 div태그로 변경 -->
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">거래자금의 원천 및 출처</h2>
+				<div class="mt15">
+					<!-- 170719fix select태그 에서 div태그로 변경 -->
+					<span class="div_select" style="width:100%;">
+						<a href="#" id="optionDefault2" class="">거래자금의 원천 및 출처 선택</a>
+					</span>
+					<!--// 170719fix select태그 에서 div태그로 변경 -->
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">거래목적 확인</h2>
+				<div>
+					<div class="inline_table mt20">
+						<p class="subject cell mt10">실소유자 인가요?</p>
+						<span class="div_select cell" style="width: 40.8%;">
+							<a href="#" id="optionDefault1" class="">네</a>
+						</span>
+					</div>
+					<div class="justify mt20">
+						<p class="subject" style="width: 70%;">미국인 또는 조세 목적성 해외거주여부</p>
+						<span class="checkbox focus">
+							<input type="checkbox" id="c4" name="" checked="">
+							<!-- 170719fix 네 에서 해당없음 으로 텍스트 수정 -->
+							<label for="c4"><span></span>해당없음</label>
+							<!--// 170719fix 네 에서 해당없음 으로 텍스트 수정 -->
+						</span>
+					</div>
+					<div class="justify mt20">
+						<p class="subject">매매명세통보/월간거래내역</p>
+						<span class="checkbox focus">
+							<input type="checkbox" id="c5" name="" checked="">
+							<label for="c5"><span></span>온라인조회</label>
+						</span>
+					</div>
+					<div class="justify mt20">
+						<p class="subject">펀드, ELS 운용보고서/잔고통보지</p>
+						<span class="checkbox focus">
+							<input type="checkbox" id="c6" name="" checked="">
+							<label for="c6"><span></span>이메일</label>
+						</span>
+						<span class="input mt10" style="width:100%;">
+							<label><input type="text" placeholder="수신 이메일 입력"></label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="btnArea outpadding mt20">
+				<a href="#;" class="btn important">다음</a>
+			</div>
+
+        </div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

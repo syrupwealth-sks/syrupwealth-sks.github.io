@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>투자정보 등록/변경</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea in_fixed">
+
+		<div class="chatArea clearfix outpadding">			
+
+			<div class="chatboxArea left">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<strong>[투자기간]</strong> 고객님께서 투자하고자 하는 자금의 <mark>투자 가능 기간</mark>은 얼마나 되십니까?  
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="a1" name="ra"/>
+							<label for="a1"><span></span>3개월 미만</label>
+						</li>
+						<li>
+							<input type="radio" id="a2" name="ra"/>
+							<label for="a2"><span></span>6개월 미만</label>
+						</li>
+						<li>
+							<input type="radio" id="a3" name="ra"/>
+							<label for="a3"><span></span>3개월 이상 ~ 1년 미만</label>
+						</li>
+						<li>
+							<input type="radio" id="a4" name="ra"/>
+							<label for="a4"><span></span>1년 이상 ~ 2년 미만</label>
+						</li>
+						<li>
+							<input type="radio" id="a5" name="ra"/>
+							<label for="a5"><span></span>2년 이상 ~ 3년 미만</label>
+						</li>
+						<li>
+							<input type="radio" id="a6" name="ra"/>
+							<label for="a6"><span></span>3년 이상</label>
+						</li>																	
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<strong>[투자경험]</strong> 다음 중 고객님의 <mark>투자경험</mark>과 가장 가까운 것은 어느 것입니까? 
+					<span class="dcs">중복 선택 가능합니다.</span>
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="checkbox" id="b1"/>
+							<label for="b1"><span></span>은행 예·적금, 국채, 지방채, 보증채, MMF, CMA 등</label>
+						</li>
+						<li>
+							<input type="checkbox" id="b2"/>
+							<label for="b2"><span></span>금융채, 신용도가 높은 회사채, 채권형펀드, 원금지급형 ELS 등</label>
+						</li>
+						<li>
+							<input type="checkbox" id="b3"/>
+							<label for="b3"><span></span>신용도가 낮은 회사채, 주식, 원금이 보장되지 않는 ELS, 시장수익율 수준의 수익을 추구하는 주식형펀드 등 </label>
+						</li>
+						<li>
+							<input type="checkbox" id="b4"/>
+							<label for="b4"><span></span>ELW, 선물옵션, 시장수익율 이상의 수익을 추구하는 주식형 펀드, 파생상품에 투자하는 펀드, 신용거래 등 </label>
+						</li>
+						<li>
+							<input type="checkbox" id="b5"/>
+							<label for="b5"><span></span>ELW, 선물옵션, 시장수익율 이상의 수익을 추구하는 주식형 펀드, 파생상품에 투자하는 펀드, 주식신용거래 등 </label>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<strong>[금융상품 지식수준]</strong> 고객님께서는 금융상품 투자에 대한 본인의 <mark>지식수준</mark>이 어느 정도 라고 생각하십니까?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="c1" name="rc"/>
+							<label for="c1"><span></span><strong>[매우 낮은 수준]</strong> 투자의사결정을 스스로 내려본 경험이 없는 정도 </label>
+						</li>
+						<li>
+							<input type="radio" id="c2" name="rc"/>
+							<label for="c2"><span></span><strong>[낮은 수준]</strong> 주식과 채권의 차이를 구별할 수 있는 정도 </label>
+						</li>
+						<li>
+							<input type="radio" id="c3" name="rc"/>
+							<label for="c3"><span></span><strong>[높은 수준]</strong> 투자할 금융상품을 대부분 구별할 수 있는 정도 </label>
+						</li>
+						<li>
+							<input type="radio" id="c4" name="rc"/>
+							<label for="c4"><span></span><strong>[매우 높은 수준]</strong> 금융상품 비롯하여 모든 투자 대상 상품의 차이를 이해할 수 있는 정도 </label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<strong>[금융자산 내 투자자금의 비중]</strong>  고객님께서 투자하고자 하는 자금은 고객님의 전체 금융자산 (부동산 등을 제외) 중 어느 정도의 <mark>비중</mark>을 차지합니까?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="d1" name="rd"/>
+							<label for="d1"><span></span>10% 이하 </label>
+						</li>
+						<li>
+							<input type="radio" id="d2" name="rd"/>
+							<label for="d2"><span></span>10% 초과 ~ 20% 이하</label>
+						</li>
+						<li>
+							<input type="radio" id="d3" name="rd"/>
+							<label for="d3"><span></span>20% 초과 ~ 30% 이하</label>
+						</li>
+						<li>
+							<input type="radio" id="d4" name="rd"/>
+							<label for="d4"><span></span>30% 초과 ~ 40% 이하</label>
+						</li>
+						<li>
+							<input type="radio" id="d5" name="rd"/>
+							<label for="d5"><span></span>40% 초과</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<strong>[소득상태]</strong> 다음 중 고객님의 <mark>수입원</mark>을 가장 잘 나타내는 것은 어느 것입니까?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="e1" name="re"/>
+							<label for="e1"><span></span>현재 일정한 수입이 발생하고 있으며 향후 현재 수준을 유지/증가할 것으로 예상</label>
+						</li>
+						<li>
+							<input type="radio" id="e2" name="re"/>
+							<label for="e2"><span></span>현재 일정한 수입이 발생하고 있으나 향후 감소하거나 불안정할 것으로 예상</label>
+						</li>
+						<li>
+							<input type="radio" id="e3" name="re"/>
+							<label for="e3"><span></span>현재 일정한 수입이 없으며, 연금이 주 수입원임</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<strong>[손실감내도]</strong>  고객님의 투자원금에 손실이 발생할 경우 다음 중 고객님이 감수할 수 있는 <mark>손실 수준</mark>은 어느 것입니까?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="f1" name="rf"/>
+							<label for="f1"><span></span> 무슨 일이 있어도 투자 원금은 보전되어야 한다. </label>
+						</li>
+						<li>
+							<input type="radio" id="f2" name="rf"/>
+							<label for="f2"><span></span>10% 미만까지는 손실을 감수할 수 있을 것 같다. </label>
+						</li>
+						<li>
+							<input type="radio" id="f3" name="rf"/>
+							<label for="f3"><span></span>20% 미만까지는 손실을 감수할 수 있을 것 같다. 기대수익이 높다면 위험이 높아도 상관하지 않겠다. </label>
+						</li>
+						<li>
+							<!-- 170724fix id 변경-->
+							<input type="radio" id="f4" name="rf"/>
+							<label for="f4"><span></span>기대수익이 높다면 위험이 높아도 상관하지 않겠다. </label>
+							<!-- 170724fix id 변경-->
+
+						</li>						
+					</ul>
+				</div>
+				<ul class="waring_list abbottom" style="bottom:-55px;">
+					<li>							
+						<span><i class="waring" /></i> 파생상품 매수 시 4번. 위험감수를 필수로 선택해야 합니다.</span>
+					</li>
+				</ul>						
+			</div>
+
+			<div class="btnArea two floatR clearfix">
+				<a href="#" class="btn normal">이전</a>
+				<a href="#" class="btn important">다음</a>				
+			</div>
+
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

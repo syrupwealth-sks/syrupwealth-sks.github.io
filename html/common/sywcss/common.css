@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/*font*/
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url(../../font/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    url(../../font/NotoSansKR-Regular-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(../../font/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(../../font/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+body{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: 'Noto Sans Korean', sans-serif; 
+	font-size:15px; 
+	word-break: keep-all;
+}
+
+* {margin:0; padding:0; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
+/* {-webkit-text-size-adjust:none;} */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; vertical-align:baseline; background:transparent;}
+
+body {line-height:1.3em;}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+
+nav ul {list-style:none;}
+
+blockquote, q {quotes:none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+
+a {margin:0; padding:0; vertical-align:baseline; background:transparent;}
+
+/* change colours to suit your needs */
+ins {background-color:#ff9; color:#000; text-decoration:none;}
+
+/* change colours to suit your needs */
+/* mark {background-color:#ff9; color:#000; font-style:italic; font-weight:500;}*/
+mark{background-color:#fff6c3; font-style: normal; font-weight:500;  /*text-shadow: -3px 0px 3px #fff6c3,  3px 0px 3px #fff6c3,  6px 0px 6px #fff6c3, -6px 0px 6px #fff6c3;*/ font-weight: 500; color:#494949;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom:1px dotted; cursor:help;}
+
+table {border-collapse:collapse; border-spacing:0;}
+
+/* change border colour to suit your needs */
+input, select {vertical-align:middle; border:none; outline: none; font-family: 'Noto Sans Korean', sans-serif;}
+input:focus, select :focus { outline: none;}
+img{border-style:none;}
+ol,ul,li{list-style:none; }
+button {border:0 none; padding:0; margin:0; background:transparent; *overflow:visible; cursor:pointer; cursor:pointer;}
+button::-moz-focus-inner {border:0; margin:0;}
+textarea {font-size: 13px; font-family: 'Noto Sans Korean', sans-serif; border-radius: 0; -webkit-appearance: none; padding: 15px; box-sizing: border-box; border: 1px solid #d9d9d9; resize: none; background-color: #fff; outline: none;}
+
+.clearfix:after {visibility: hidden;  display: block;  font-size: 0;  content: " ";  clear: both;  height: 0;}
+
+html, body, .wrap{height:100%;}

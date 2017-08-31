@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>목표달성도</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+			<!--account_select-->			
+			<span class="account_select">
+				<a href="#" id="accountDefault">
+					<i class="picIcn icn2 bg_pig"></i>
+					<span class="text">Let's Go To Spain!</span>
+					<span class="number">100••••••02</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">가족 여행</span>
+							<span class="number">300••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">함께 쓰는 통장</span>
+							<span class="number">200••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->
+
+			<!--imgchart2-->
+			<div class="imgchart2 outpadding mt10">
+				<span class="chart_txt alignC mt30">
+					<span class="pb5"><em>26.5</em>%</span> 
+					달성했어요	
+				</span>
+				<div class="chart mt30">
+					<div class="chart_bg bigmoney"><!--목돈-->												
+						<div class="chart_mask">
+							<div class="chart_bar"><span class="img_data1">26.5</span></div>
+							<script type="text/javascript">
+								$(window).load(function(){
+									var img_data1 = 100 - $(".img_data1").text();
+									$(".chart_bar").animate({"height": img_data1 + "%"});
+								});
+							</script>				
+						</div>
+					</div>					
+				</div>
+				<div class="txt_div mt30">
+					<span class="tl strong">김인영 고객님</span>
+					<span class="dcs mt10">
+						<!--<mark>140만원</mark> 마련을 위해 <mark>2017년 5월</mark>에 투자를 시작하셨습니다. <mark>70만원</mark>이 모여서 <mark>50%</mark> 목표달성 하셨습니다.  -->
+						아직 투자상품을 매수하지 않으셨네요. 입금하셔서 포트폴리오를 매수하시면 목표달성도를 보실 수 있습니다.
+					</span>
+				</div>
+			</div>
+			<!--//imgchart2-->
+
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

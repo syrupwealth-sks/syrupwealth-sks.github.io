@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle close">
+		<i class="pageClose"></i>
+		<span>주소 찾기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<ul class="tab_menu" data-tab-active="false">
+			<li style="width:50%;">
+				<a href="#" id="tab1">통합검색</a>
+			</li>
+			<li class="focus" style="width:50%;">
+				<a href="#" id="tab2">도로명</a>
+			</li>
+		</ul>
+
+		<div class="outpadding">
+
+			<span class="select mt25" style="width:100%;">
+				<select class="current" title="시/도 선택">
+					<option value="" disabled="" selected="">시/도 선택</option>
+					<option value="">option 1</option>
+					<option value="">option 2</option>
+					<option value="">option 3</option>
+				</select>
+			</span>
+
+			<span class="select mt10" style="width:100%;">
+				<select class="current" title="군/구 선택">
+					<option value="" disabled="" selected="">군/구 선택</option>
+					<option value="">option 1</option>
+					<option value="">option 2</option>
+					<option value="">option 3</option>
+				</select>
+			</span>
+
+			<div class="search_input clearfix mt20">
+				<!-- 170719fix placeholder 텍스트 수정(텍스트를 입력하세요 -> 도로명 입력)-->
+				<label><input type="text" placeholder="도로명 입력" value=""></label>
+				<!--// 170719fix placeholder 텍스트 수정(텍스트를 입력하세요 -> 도로명 입력)-->
+				<a href="#" class="search_cancel">검색어 취소</a>
+				<a href="#" class="search_submit">검색</a>
+				<!--##
+					검색 후 키워드 추천
+					자동완성 주석처리
+					활성화 시 : on 클래스 추가
+					ex) <li class="name on">option 1</li>
+				##-->
+
+				<!-- <div class="sub">
+					<ul class="optionList">
+						<li class="name">option 1</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">option 2</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">option 3</li>
+					</ul>
+				</div> -->
+				<!--##// 검색 후 키워드 추천 ##-->
+			</div>
+
+			<!--## 검색 전 화면 ##-->
+			<!-- <p class="description mt20">
+				<strong>아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.</strong>
+			</p>
+
+			<ul class="normal_list mt15">
+				<li><mark>도로명 + 건물번호</mark> - 예) 국제금융로 8</li>
+			</ul> -->
+			<!--##// 검색 전 화면 ##-->
+
+			<!--## 검색 후 화면 ##-->
+			<h2 class="title mt20">
+				검색결과
+				<span class="txt_purple">5건</span>
+			</h2>
+
+			<div class="inline_table mt15">
+				<div class="cell">
+					<span class="select" style="width:100%;">
+						<select class="current" title="도로명 전체">
+							<option value="" disabled="" selected="">도로명 전체</option>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+						</select>
+					</span>
+				</div>
+				<div class="cell">
+					<span class="select" style="width:100%;">
+						<select class="current" title="지역명 전체">
+							<option value="" disabled="" selected="">지역명 전체</option>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+						</select>
+					</span>
+				</div>
+			</div>
+
+			<!--## 검색된 주소 리스트 ##-->
+			<div class="address_list mt15">
+				<a href="#" class="address_cell selected">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+												<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+			</div>
+			<!--##// 검색된 주소 리스트 ##-->
+
+			<!--## paging ##-->
+			<div class="paging mt15">
+				<!--
+					다음 또는 이전 버튼을 활성화 시킬때에는 active 클래스를 추가해 주세요.
+				-->
+				<!-- 이전 -->
+				<a href="#;" class="control prev">
+					<span class="ico sp-am"></span>
+				</a>
+				<!-- 현재페이지 -->
+				<p><strong class="txt_purple">1</strong> / 100</p>
+				<!-- 다음 -->
+				<a href="#;" class="control next active">
+					<span class="ico sp-am"></span>
+				</a>
+			</div>
+			<!--##// paging ##-->
+
+			<!--##// 검색 후 화면 ##-->
+
+
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

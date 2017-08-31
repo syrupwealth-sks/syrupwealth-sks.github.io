@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>포트폴리오 매수</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea in_fixed">
+		<!--processBar-->
+		<div class="processBar">
+			<span class="text">투자성향을 확인해주세요</span>
+		</div>
+		<!--//processBar-->
+		<!--note_check-->
+		<div class="note check bdnone">
+			<div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b1" name=" " class="small normal_r">
+                <label for="b1">
+                    <span></span>
+                    투자성향(정보)가 등록되어 있지 않습니다.
+                </label>
+            </div>
+            <div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b2" name=" " class="small normal_r">
+                <label for="b2">
+                    <span></span>
+                    고객정보(성향)등록 후 36개월이 경과했습니다.투자정보 재확인 후 매수가 가능합니다.
+                </label>
+            </div>
+            <div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b3" name=" " class="small normal_r">
+                <label for="b3">
+                    <span></span>
+                    투자정보(성향)당일 등록(재확인) 후 매수가 가능합니다.
+                </label>
+            </div>
+
+
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="c1" name=" " class="small normal_r">
+                <label for="c1">
+                    <span></span>
+                    고객님의 투자성향보다 위험도가 높은 상품은 매수가 불가능합니다. 투자성향을 변경해주세요.
+                </label>
+            </div>
+
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="d1" name=" " class="small normal_r">
+                <label for="d1">
+                    <span></span>
+                    만 65세 이상인 경우 파생경험 1년 이상만 파생상품매수가 가능합니다.                    
+                </label>
+            </div>
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="d2" name=" " class="small normal_r">
+                <label for="d2">
+                    <span></span>
+                    만 65세 이상인 경우 파생경험 1년 이상만 중위험초과상품 매수가 가능합니다.
+                </label>
+            </div>
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="d3" name=" " class="small normal_r">
+                <label for="d3">
+                    <span></span>
+                    만 65세 이상인 경우 파생경험 3년 이상만 중위험초과상품 매수가 가능합니다.
+                </label>
+            </div>     
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="d4" name=" " class="small normal_r">
+                <label for="d4">
+                    <span></span>
+                    파생경험 1년 이상만 매수가 가능합니다.
+                </label>
+            </div>            
+
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="e1" name=" " class="small normal_r">
+                <label for="e1">
+                    <span></span>
+                    고객성향(투자가능기간)이 금융투자상품 투자기간을 충족해야 매수가 가능합니다.
+                </label>
+            </div>
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="e2" name=" " class="small normal_r">
+                <label for="e2">
+                    <span></span>
+                    고객성향(손실감내수준)이 금융투자상품 위험도를 충족해야 매수가 가능합니다.
+                </label>
+            </div>
+            <div class="tt2">
+                <i class="right"></i>
+                <input type="checkbox" id="e3" name=" " class="small normal_r">
+                <label for="e3">
+                    <span></span>
+                    고객성향(투자목적)이 금융투자상품 위험도를 충족해야 매수가 가능합니다.
+                </label>
+            </div>
+
+		</div>
+		<!--//note_check-->
+
+        <!--note_agree-->
+        <div class="bd_top10"></div>
+        <div class="note_agree note bdnone">
+            <p>고객님의 투자성향은 위험중립형으로 투자 상품중
+            <mark>공격투자형 상품이 존재</mark>하여 투자제한이 있습니다.<br/>
+            고객님의 투자성향과 관계없이 투자를 진행하시려면 아래 동의 
+            버튼을 선택해 주시기 바랍니다. 이에 따른 투자 손실에 대한 책임은 
+            고객님께 있습니다 </p>
+
+            <div class="btnWrap two mt20">
+                <a href="#" class="btn normal">취소</a>
+                <a href="#" class="btn important">동의</a>
+            </div>
+        </div>
+        <!--//note_agree-->
+
+
+		<div class="btnArea two mt25 outpadding">
+				<a href="#" class="btn normal">이전</a>
+				<a href="#" class="btn important">다음</a>
+		</div>
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

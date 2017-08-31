@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>포트폴리오 매수</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+		<!--processBar-->
+		<div class="processBar">
+			<span class="text">계좌번호를 선택해주세요</span>
+			<div class="step">
+				<i class="bl_step on"></i>
+				<i class="bl_step"></i>
+			</div>
+		</div>
+		<!--//processBar-->
+		<div class="outpadding mt25">
+			<!--account_select-->
+			<span class="account_select">
+				<a href="#" id="accountDefault">
+					<i class="picIcn icn1"></i>
+					<span class="text">Let's Go To Spain!</span>
+					<span class="number">100••••••02</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">가족 여행</span>
+							<span class="number">300••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">함께 쓰는 통장</span>
+							<span class="number">200••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->
+		</div> <!--//outpadding-->
+
+			<!--input_password-->
+			<div class="input_password note">
+				<span class="input_div alignC pass">
+					<a href="#" onclick="return false">● ● ● ●</a>
+				</span>
+			</div>
+			<!--//input_password-->
+
+		<div class="outpadding">
+			<!--list_normal-->
+			<ul class="list normal">
+				<li class="clearfix in_btn">
+					<span class="tt"><em class="s_bold">매수가능금액</em></span>
+					<dl class="f_right">
+						<dd>
+							<span class="t_gray">1,000,000원</span>
+							<a href="#" class="btn mini">입금하기</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<span class="tt"><em class="s_bold">투자금액</em> <span class="t_gray">(매수가능금액의 95% 이내)</span></span>
+					<dl class="unit_input">
+						<dd>
+							<span class="input">
+								<label><input type="tel" value="960,000"/><span>원</span></label>
+							</span>
+						</dd>
+					</dl>
+				</li>		
+			</ul>
+			<!--//list_normal-->
+
+			<div class="btnArea mt10">
+				<a href="#" class="btn important">다음</a>
+			</div>
+
+			<p class="waring_list mt25">
+				<span class="var"><i class="waring"></i> 
+					펀드 로보바이저 포트폴리오는 09:00~16:30에 주문이 가능합니다.
+				</span>
+			</p>
+		</div>
+	</div>
+	<!--##// contentArea ##-->
+
+	<!-- 170724fix 팝업 -->
+	<script type="text/javascript">
+	$(function(){
+		layerpopShow('popupid2');
+	});
+	</script>	
+	<div class="layer_popup" id="popupid2">
+		<div class="bg_layer"></div>
+		<div class="popup">
+			<div class="popCont">
+				<div class="pop_cont message">
+					시럽웰스 다른 통장에서<br/>
+					마이로보로 입금할까요?
+					
+					<div class="popbtnArea mt20">
+						<a href="#" class="popbtn grayline main">계좌번호 복사</a><!-- main클래스시 화면이 닫히지 않음 -->
+						<a href="#" class="popbtn normal">입금하기</a>
+					</div>
+				</div>						
+			</div>					
+		</div>				
+	<div>
+	<!--// 170724fix 팝업 -->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

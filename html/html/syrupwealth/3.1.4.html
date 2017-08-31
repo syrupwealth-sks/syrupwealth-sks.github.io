@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>통장만들기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+    <!--## processBar ##-->
+	<div class="processBar">
+		<span class="text">계좌인증을 위해 정보를 입력해주세요</span>
+		<div class="step">
+			<i class="bl_step on"></i>
+			<i class="bl_step"></i>
+			<i class="bl_step"></i>
+		</div>
+	</div>
+    <!--##// processBar ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea in_fixed">
+
+        <div class="outpadding">
+
+            <div class="info_confirm mt5">
+                <span class="div_select bottomLine mt10" style="width:100%; display: block;">
+                	<a href="#" id="optionDefault1" class="" data-fc-choice="false" style="display: block;">금융기관을 선택하세요.</a>
+                </span>
+
+                <!-- 금융사 리스트 선택 탭 170724fix  -->
+                <div class="fc_list_wrap">
+                    <ul class="tab_menu outpadding">
+                        <li class="focus" style="width:50%;">
+                            <a href="#" id="tab1"> 은행</a>
+                        </li>
+                        <li style="width:50%;" class="">
+                            <a href="#" id="tab2">증권</a>
+                        </li>
+                    </ul>
+                    <!-- 은행 -->
+                    <div class="tab_cont focus" id="tab1_cont">
+                        <div class="fc_list outpadding">
+                            <ul class="clearfix">
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc7">
+                                    <label for="fc7"><p>하나은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc8">
+                                    <label for="fc8"><p>중소기업은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc9">
+                                    <label for="fc9"><p>NH은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc10">
+                                    <label for="fc10"><p>수협은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc11">
+                                    <label for="fc11"><p>SC은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc12">
+                                    <label for="fc12"><p>부산은행</p></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 증권사 -->
+                    <div class="tab_cont" id="tab2_cont">
+                        <div class="fc_list outpadding">
+                            <ul class="clearfix">
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc1">
+                                    <label for="fc1"><p>미래에셋저축은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc2">
+                                    <label for="fc2"><p>유안타증권</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc3">
+                                    <label for="fc3"><p>NH저축은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc4">
+                                    <label for="fc4"><p>미래에셋저축은행</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc5">
+                                    <label for="fc5"><p>유안타증권</p></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="fcChoice" id="fc6">
+                                    <label for="fc6"><p>NH저축은행</p></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--// 170724fix  -->
+
+                <!-- 170724fix style 및 아이디 추가-->
+                <span class="input mt10" style="width:100%; display: none;" id="account_input">
+    				<label><input type="tel" placeholder="계좌번호 입력" maxlength="30"></label>
+    			</span>
+    			<!--// 170724fix -->
+
+                <div class="current_state ico_account mt30">
+    				<span class="ico sp-am"></span>
+    				<p>
+    					시럽증권 계좌의<br>
+                        은행이체약정 서비스가 <mark>자동 등록</mark> 됩니다.<br>
+                        등록 후 <mark>입력하신 계좌로만 이체</mark>가 가능합니다.
+    				</p>
+    			</div>
+
+            </div>
+
+            <div class="btnArea">
+                <!-- 비활성화 -->
+                <a href="#;" class="btn gray">계좌확인</a>
+                <!-- 활성화 -->
+                <a href="#;" class="btn important">계좌확인</a>
+            </div>
+
+        </div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+<!-- 170724fix 은행,증권 순서 바뀜.디폴트는 열려있어야 함 -->
+<script type="text/javascript"><!--
+    $(function(){
+        /*
+            $("#optionDefault1").click();
+
+            $(".fc_list label").click(function(){ //탭레이블 클릭시 계좌선택 display:block 처리
+                $("#account_input").css("display","block");
+            });
+*/
+            
+    });
+</script>
+
+</body>
+</html>

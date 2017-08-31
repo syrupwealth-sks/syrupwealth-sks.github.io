@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap" id="main">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>시럽 멤버십 웰스</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<!-- 카드발급 -->
+		<div class="card_issuance border-bottom-purple">
+			<div class="card_view">
+				<!-- 2017-08-25 fixed background-image의 url값이 수정됨 -->
+				<span class="card_img" style="background-image: url(../../common/sywimg/temp/temp_checkcard_03.png);">
+					<span class="hidden">카드 이름</span>
+				</span>
+				<!--// 2017-08-25 fixed -->
+			</div>
+			<a href="#" class="btn_issuance">
+				<span>카드 발급받기</span>
+			</a>
+		</div>
+		<!--// 카드발급 -->
+
+		<!-- 시럽웰스 자세히보기 -->
+		<div class="welth_detailview sec_shadow mt10">
+			<a href="#" class="quick">
+				<span class="txt">
+					스마트하게 돈버는 지갑,
+					<br>
+					<strong class="txt_purple">Syrup Wealth</strong>
+					<br>
+					<span class="round_btn">시럽웰스 자세히보기</span>
+				</span>
+			</a>
+		</div>
+		<!--// 시럽웰스 자세히보기 -->
+
+		<!-- 이벤트 -->
+		<div class="main_event sec_shadow mt15">
+			<h2 class="normal_title">꿀꿀 이벤트</h2>
+			<div class="event_slide">
+				<ul>
+					<li>
+						<a href="javascript:;" class="img" style="background-image: url(../../common/sywimg/temp/temp_main_banner.png);"></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="img" style="background-image: url(../../common/sywimg/temp/temp_main_banner.png);"></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="img" style="background-image: url(../../common/sywimg/temp/temp_main_banner.png);"></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="img" style="background-image: url(../../common/sywimg/temp/temp_main_banner.png);"></a>
+					</li>
+				</ul>
+			</div>
+			<a href="#" class="arrow_btn right"><span>이벤트 <strong>더보기</strong></span></a>
+		</div>
+		<!--// 이벤트 -->
+
+		<!-- 알림 -->
+		<div class="main_notice sec_shadow mt15">
+			<h2 class="normal_title">알림</h2>
+			<ul class="list">
+				<li class="item">
+					<a href="#">
+						<span class="subject">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세</span>
+						<span class="date">18.12.02</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span class="subject">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세</span>
+						<span class="date">18.12.02</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span class="subject">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세</span>
+						<span class="date">18.12.02</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span class="subject">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세</span>
+						<span class="date">18.12.02</span>
+					</a>
+				</li>
+			</ul>
+			<a href="#" class="arrow_btn right"><span>알림 <strong>더보기</strong></span></a>
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+<script>
+
+$(function() {
+
+	//슬라이드
+	$(".event_slide > ul").bxSlider({
+		auto: true,
+		autoDelay: 5*1000, 		//5초 마다 자동으로 넘어감
+		adaptiveHeight: true,
+		pager: true,
+		controls: false
+	});
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>개인 정보 변경</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+			
+			<!--account_select-->			
+			<span class="account_select">
+				<a href="#" id="accountDefault">
+					<i class="picIcn icn2 bg_pig"></i>
+					<span class="text">Let's Go To Spain!</span>
+					<span class="number">100••••••02</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">가족 여행</span>
+							<span class="number">300••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">함께 쓰는 통장</span>
+							<span class="number">200••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->			
+
+			<!--input_password-->
+			<div class="input_password bd1">
+				<span class="input_div alignC pass">
+					<a href="#" onclick="return false">● ● ● ●</a>
+				</span>
+			</div>
+			<!--//input_password-->
+
+		</div>
+
+		<div class="input_form outpadding mt25">
+		
+			<!--170818 텍스트 수정 -->
+			<span class="tl">권리통보지 선택</span>
+			<ul class="job clearfix">
+				<li>
+					<span class="radio">	
+						<input type="radio" id="r1" name="rr" />
+						<label for="r1"><span></span> 직장</label>
+					</span>
+					<!-- 170724fix 텍스트 -->
+					<span class="dcs">예) 회사원, 자영업</span>
+					<!--// 170724fix 텍스트 -->
+				</li>
+				<li>
+					<span class="radio">	
+						<input type="radio" id="r2" name="rr" />
+						<label for="r2"><span></span>자택</label>
+					</span>				
+
+					<span class="dcs">예) 주부, 학생, 기타</span>
+				</li>				
+			</ul>
+			<!--//170818 텍스트 수정 -->
+
+			<span class="tl mt40 pb10">직장정보를 입력해주세요.</span>
+			<span class="input" style="width:100%;">
+				<label><input type="text"  placeholder="직장명"/></label>
+			</span>
+
+			<span class="tl mt40">직장주소를 입력해주세요. <i class="bl_noti"></i></span>
+			<a href="#" class="btn normal">주소찾기</a>
+
+				<!-- 주소 검색 후  -->
+				<div class="licence_input st3 clearfix mt20"><!--  170818 st2클래스를 st3클래스로 변경  -->
+					<span class="input">
+						<label><input type="text" value="34259" placeholder="우편번호" maxlength="5" readonly="readonly"></label>
+					</span>
+					<!-- 170818 주소찾기 클래스 추가 및 삭제 버튼 추가 -->
+					<a href="#" class="btn mini address">주소찾기</a>
+					<a href="#" class="btn mini del">삭제</a>
+					<!--// 170818 주소찾기 클래스 추가 및 삭제 버튼 추가 -->
+				</div>
+				<span class="input mt10" style="width:100%;">
+					<label><input type="text" value="서울시 강남구 역삼동 681-1" placeholder="텍스트를 입력하세요"></label>
+				</span>
+				<span class="input mt10" style="width:100%;">
+					<label><input type="text" placeholder="상세주소 입력"></label>
+				</span>
+				
+				<!-- 170818 주소삭제 추가 -->				
+				<a href="#" class="btn normal mt25">주소삭제</a>
+				<!--// 170818 주소삭제 추가 -->
+			
+		</div>
+
+		<div class="input_form outpadding mt25">
+			<span class="tl">휴대폰 번호 변경  <i class="bl_noti"></i></span>
+
+			<div class="phon_input clearfix">
+				<span class="select">
+					<select>
+						<option value="" >010</option>
+						<option value="">018</option>
+						<option value="">016</option>
+					</select>
+				</span>
+				<div class="input_in">
+					<label><input type="tel" value =""/></label>
+					-
+					<label><input type="tel" value =""/></label>
+				</div>
+			</div>	
+
+		</div>	
+		<div class="input_form outpadding mt25">
+			<span class="tl pb10">이메일 주소 변경  <i class="bl_noti"></i></span>
+			<span class="input" style="width:100%;">
+				<label><input type="text"  placeholder="" value="group@sk.com"/></label>
+			</span>
+		</div>
+		<!-- 170724fix 텍스트 -->
+		<div class="outpadding mt40">
+			<!--<a href="#" class="btn important">변경</a>-->
+			<a href="#" class="btn gray">변경</a>			
+		</div>
+		<!-- 170724fix 텍스트 -->
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

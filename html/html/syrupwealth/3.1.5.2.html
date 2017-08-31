@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle close">
+		<i class="pageClose"></i>
+		<span>주소 찾기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<ul class="tab_menu" data-tab-active="false">
+			<li class="focus" style="width:50%;">
+				<a href="#" id="tab1">통합검색</a>
+			</li>
+			<li style="width:50%;">
+				<a href="#" id="tab2">도로명</a>
+			</li>
+		</ul>
+
+		<div class="outpadding">
+
+			<div class="search_input clearfix mt10">
+				<!-- 170724fix 텍스트 수정 -->
+				<label><input type="text" placeholder="예) 국제금융로 8" value=""></label>
+				<!-- 170724fix 텍스트 수정 -->
+				<a href="#" class="search_cancel">검색어 취소</a>
+				<a href="#" class="search_submit">검색</a>
+				<!--##
+					검색 후 키워드 추천
+					자동완성 주석처리
+					활성화 시 : on 클래스 추가
+					ex) <li class="name on">option 1</li>
+				##-->
+
+				<!-- <div class="sub">
+					<ul class="optionList">
+						<li class="name">option 1</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">option 2</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">option 3</li>
+					</ul>
+				</div> -->
+				<!--##// 검색 후 키워드 추천 ##-->
+			</div>
+
+			<!--## 검색 전 화면 ##-->
+			<!-- <p class="description mt20">
+				<strong>아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.</strong>
+			</p>
+
+			<ul class="normal_list mt15">
+				<li><mark>도로명 + 건물번호</mark> - 예) 국제금융로 8</li>
+				<li><mark>지역명(동/리)+ 번지</mark> - 예) 여의도동 45-1</li>
+			</ul> -->
+			<!--##// 검색 전 화면 ##-->
+
+			<!--## 검색 후 화면 ##-->
+			<h2 class="title mt25">
+				검색결과
+				<span class="txt_purple">5건</span>
+			</h2>
+
+			<!--## 검색결과가 많을 경우 ##-->
+			<div class="desc_box mt15">
+				<p class="txt"><mark>아래와 같은 조합</mark>으로검색해보세요.</p>
+				<ul class="normal_list" data-col="2">
+					<li>도로명 + 건물번호</li>
+					<li>지역명 + 지번</li>
+					<li>지역명 + 건물명(아파트명)</li>
+					<li>사서함명 + 번호</li>
+				</ul>
+			</div>
+			<!--##/ 검색결과가 많을 경우 ##-->
+
+			<div class="inline_table mt25">
+				<div class="cell">
+					<span class="div_select" style="width:100%;">
+						<a href="#" id="optionDefault1" class="addrSelect1">셀렉트 박스를 선택하세요.</a>
+					</span>
+				</div>
+				<div class="cell">
+					<span class="div_select" style="width:100%;">
+						<a href="#" id="optionDefault2" class="addrSelect2">셀렉트 박스를 선택하세요.</a>
+					</span>
+				</div>
+			</div>
+
+			<!--## 검색된 주소 리스트 ##-->
+			<div class="address_list mt15">
+
+				<!--## 검색된 결과 없음 ##-->
+				<!-- <p class="no_data">
+					검색결과를 찾을 수 없습니다.
+				</p> -->
+				<!--##// 검색된 결과 없음 ##-->
+
+				<a href="#" class="address_cell selected">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="#" class="address_cell">
+					<p class="post_number">07332</p>
+					<div class="detail">
+						<dl>
+							<dt>
+								<span>도로명</span>
+							</dt>
+							<dd>
+								<span>서울특별시 영등포구 국제금융로8길 31 (SK증권빌딩)</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<span>지번</span>
+							</dt>
+							<dd>
+								<span>서울 영등포구 여의도동 45-1</span>
+							</dd>
+						</dl>
+					</div>
+				</a>
+			</div>
+			<!--##// 검색된 주소 리스트 ##-->
+
+			<!--## paging ##-->
+			<div class="paging">
+				<!--
+					다음 또는 이전 버튼을 활성화 시킬때에는 active 클래스를 삽입해 주세요.
+				-->
+				<!-- 이전 -->
+				<a href="#;" class="control prev">
+					<span class="ico sp-am"></span>
+				</a>
+				<!-- 현재페이지 -->
+				<p><strong class="txt_purple">1</strong> / 100</p>
+				<!-- 다음 -->
+				<a href="#;" class="control next active">
+					<span class="ico sp-am"></span>
+				</a>
+			</div>
+			<!--##// paging ##-->
+
+			<!--##// 검색 후 화면 ##-->
+
+
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+<script>
+(function(win, doc, $){
+
+	window.qs = function(target, wrapper) {
+		if (wrapper) {
+			return wrapper.querySelector(target);
+		}
+		return doc.querySelector(target);
+	};
+	window.qsa = function(target, wrapper) {
+		if (wrapper) {
+			return wrapper.querySelectorAll(target);
+		}
+		return doc.querySelectorAll(target);
+	}
+
+	var selectLayer = function(data, callback, callback2) {
+
+		this.style = "top: 50%; left: 50%; position: fixed; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%)";
+
+		this.selectLayeryHTML = "";
+		this.selectLayeryHTML += '<div class="layer_popup" id="selectLayerWrap" style="display: block;">';
+		this.selectLayeryHTML += 	'<div class="bg_layer"></div>';
+		this.selectLayeryHTML += 	'<div class="popup" style="' + this.style + '">';
+		this.selectLayeryHTML += 		'<div class="popCont">';
+		this.selectLayeryHTML += 			'<div class="pop_cont popSelect">';
+		this.selectLayeryHTML += 				'<dl class="popSelecter">';
+		this.selectLayeryHTML += 				'</dl>';
+		this.selectLayeryHTML += 			'</div>';
+		this.selectLayeryHTML += 		'</div>';
+		this.selectLayeryHTML += 	'</div> ';
+		this.selectLayeryHTML += '</div>';
+
+		this.body = doc.body || qs("body") || doc.getElementsByTagName("body")[0];
+
+		this.callback = callback;
+		this.callback2 = callback2;
+
+		this.endFlag = true;
+		this.initData = data;
+
+		this.firstAppend();
+
+	};
+
+	selectLayer.prototype.append = function ( data ) {
+		var that = this;
+		for ( var i=0; i < data.length; i+=1 ) {
+			(function(j) {
+				var dd = document.createElement("dd");
+				var a = document.createElement("a");
+				a.href = "javascript:;";
+				a.innerText = data[i];
+				dd.appendChild(a)
+				qs(".popCont .pop_cont .popSelecter", that.wrapper).appendChild(dd);
+				that.bindEvent(dd)
+			})(i);
+		}
+	}
+
+	selectLayer.prototype.firstAppend = function(add) {
+		var that = this;
+		var body = that.body;
+		body.insertAdjacentHTML("beforeend", that.selectLayeryHTML);
+		that.wrapper = qs("#selectLayerWrap > .popup");
+		that.append(that.initData);
+		that.scrollEnd();
+	};
+
+	selectLayer.prototype.itemClick = function() {
+		var that = this;
+		return function () {
+			that.callback(this.innerText);
+			that.wrapper.parentNode.remove()
+		};
+	}
+
+	selectLayer.prototype.bindEvent = function(targets) {
+		var that = this;
+		var i = 0;
+		if ( targets.length ) {
+			for  ( ; i < targets.length; i+=1 ) {
+				(function(j){
+					targets[j].addEventListener("click", that.itemClick(), false);
+				})(i)
+			}
+		} else {
+			targets.addEventListener("click", that.itemClick(), false);
+		}
+	};
+
+	selectLayer.prototype.endFlag = true;
+
+	selectLayer.prototype.scrollEnd = function() {
+		var that = this;
+		var wrapper = that.wrapper;
+		var padding = 80;
+
+		wrapper.addEventListener("scroll", function(event){
+			var scrollTop = this.scrollTop;
+			console.log(that.endFlag);
+			if ( scrollTop >= (wrapper.scrollHeight - wrapper.clientHeight - padding) && that.endFlag) {
+				that.endFlag = false;
+				that.callback2();
+			}
+		}, false);
+	};
+
+	window.selectLayer = selectLayer;
+
+})(window, document, jQuery);
+
+
+
+//////////////////////////////////////////////////////////
+
+var a = null;
+
+var layerCallback = function (callbackData) {
+	console.log(callbackData);
+};
+
+var layerCallback2 = function ( successData ) {
+	var successData = ["하하하", "하하하", "하하하", "하하하", "하하하"];
+	a.endFlag = true;
+	a.append(successData);
+};
+
+$(".addrSelect1").on("click", function(  ) {
+	var i = 0;
+	var data = new Array(20).fill(i++ + "번째 아이템");
+
+	a = new selectLayer(data, layerCallback, layerCallback2);
+});
+
+</script>
+
+
+</body>
+</html>

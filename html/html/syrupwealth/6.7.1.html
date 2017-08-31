@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>마이피그</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+			
+			<!--account_select-->			
+			<span class="account_select mt25">
+				<a href="#" id="accountDefault">
+					<i class="picIcn icn2 bg_pig"></i>
+					<span class="text">Let's Go To Spain!</span>
+					<span class="number">100••••••02</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">가족 여행</span>
+							<span class="number">300••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">함께 쓰는 통장</span>
+							<span class="number">200••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->
+
+			<dl class="info_balance clearfix">
+				<dt>
+					<span class="tline">(최근 한달)</span>
+					사용금액
+				</dt>
+				<dd>
+					<em class="value">4,140,000</em>
+					<span class="unit">원</span>
+				</dd>
+			</dl>
+
+			<div class="btnArea two">
+				<a href="#" class="btn normal">보유카드 조회</a>
+				<a href="#" class="btn normal">이용안내</a>
+			</div>
+
+		</div><!--//outpadding-->
+
+		<div id="이용내역">
+			<dl class="tab_list clearfix two">
+				<dd>
+					<a href="#" class="focus">이용내역</a>
+					<a href="#">카드혜택</a>
+				</dd>
+			</dl>
+
+			<div class="btn_scroll leftpadding">
+				<ul class="clearfix">
+					<li><a href="#" class="btn mini show_search"><i class="icnCal"></i></a></li>
+					<li><a href="#" class="btn mini">오늘</a></li>
+					<li><a href="#" class="btn mini">1주일</a></li>
+					<li><a href="#" class="btn mini">1개월</a></li>
+					<li><a href="#" class="btn mini focus">3개월</a></li>
+					<li><a href="#" class="btn mini">6개월</a></li>
+					<li><a href="#" class="btn mini">12개월</a></li>
+				</ul>
+			</div>
+			<script>
+					$(".show_search").on("click", function (event) {
+						var s_view = $(".box_search").css("display");
+						if ( s_view != "none" ) {
+							$(".box_search").fadeOut();
+						} else {
+							$(".box_search").fadeIn();
+						}
+						return false;
+					});
+			</script>
+			
+			<div class="outpadding">
+				<div class="in_search">
+					<span class="t_gray date">2017.06.10 ~ 2017.09.10</span>
+					<!-- 170818 합계 추가 -->
+					<span class="font13 date tprice">합계: 125,123,660원</span>
+					<!--// 170818 합계 추가 -->
+					<div class="box_search">
+						<div class="under">
+							<span class="date">2017.09.10</span> ~ 
+							<span class="date">2017.09.10</span>
+						</div>
+						<a href="#" class="btn normal">조회</a>
+					</div>
+				</div>
+
+				<div class="nonArea">
+					<div class="tb">
+						<div class="cell">
+							<i class="icnNone"></i>
+							<div class="txt">
+								조회내역이 없습니다.					
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<ul class="list normal">
+					<li>
+						<dl class="unit_both red clearfix"><!-- 170818 red -->
+							<dt class="title">
+								<em class="s_bold">스타벅스커피 여의도점 스타벅스커피 여의도점여의도점</em>
+								<span class="date">2017.09.10 08:11</span>
+							</dt>
+							<dd class="fr   mid">
+								<em class="value">1,000,000</em> <span class="unit">원</span>
+							</dd>
+						</dl>
+						<div class="show_detail">
+							<i class="bl_plus_gray"></i>
+							<i class="bl_minus_gray"></i>
+							<ul class="box_plus">
+								<li>
+									<em class="fl">승인번호</em>
+									<span class="fr">45087239</span>
+								</li>
+								<!-- 170724fix 삭제
+								<li>
+									<em class="fl">이용구분</em>
+									<span class="fr">국내일반</span>
+								</li>-->
+								<li>
+									<em class="fl">상태</em>
+									<span class="fr point">정상</span>
+								</li>
+							</ul>
+							
+						</div>
+					</li>
+					<li>
+						<dl class="unit_both blue clearfix"><!-- 170818 blue -->
+							<dt class="title">
+								<em class="s_bold">커피빈 SK증권점</em>
+								<span class="date">2017.09.10 08:11</span>
+							</dt>
+							<dd class="fr mid">
+								<em class="value">600,000</em> <span class="unit">원</span>
+							</dd>
+						</dl>
+						<div class="show_detail">
+							<i class="bl_plus_gray"></i>
+							<i class="bl_minus_gray"></i>
+							<ul class="box_plus">
+								<li>
+									<em class="fl">승인번호</em>
+									<span class="fr">45087222</span>
+								</li>
+								<!-- 170724fix 삭제
+								<li>
+									<em class="fl">이용구분</em>
+									<span class="fr">국내일반</span>
+								</li>-->
+								<li>
+									<em class="fl">상태</em>
+									<span class="fr point">정상</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<dl class="unit_both blue clearfix"><!-- 170818 blue -->
+							<dt class="title">
+								<em class="s_bold">백미당</em>
+								<span class="date">2017.09.10 08:11</span>
+							</dt>
+							<dd class="fr mid">
+								<em class="value">56,000</em> <span class="unit">원</span>
+							</dd>
+						</dl>
+						<div class="show_detail">
+							<i class="bl_plus_gray"></i>
+							<i class="bl_minus_gray"></i>
+							<ul class="box_plus">
+								<li>
+									<em class="fl">승인번호</em>
+									<span class="fr">45087233</span>
+								</li>
+								<!-- 170724fix 삭제
+								<li>
+									<em class="fl">이용구분</em>
+									<span class="fr">국내일반</span>
+								</li>-->
+								<li>
+									<em class="fl">상태</em>
+									<span class="fr point">정상</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul><!--//list normal-->
+				<script>
+					$(".bl_plus_gray").on("click", function (event) {
+						$(this).hide();
+						$(this).next().show();
+						$(this).next().next().slideDown("fast");
+						return false;
+					});
+					$(".bl_minus_gray").on("click", function (event) {
+						$(this).hide();
+						$(this).parent().find(".bl_plus_gray").show();
+						$(this).next().slideUp("fast");
+						return false;
+					});
+				</script>
+
+				<a href="#" class="btn more mt10">이용내역 더보기 <i class="down"></i></a>
+			</div><!--//outpadding-->
+		</div><!--//이용내역-->
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

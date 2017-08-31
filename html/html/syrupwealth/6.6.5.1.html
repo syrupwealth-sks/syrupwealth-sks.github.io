@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>이체</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+			<span class="tl_top">보내는 계좌</span>
+
+			<!--account_select-->
+			<span class="account_select">
+				<a href="#" id="accountDefault">
+					<i class="picIcn icn2 bg_pig"></i> <!-- icn1: 마이 피그, icn2: 마이 로보, icn3: 마이 카드  -->
+
+					<span class="text">Let's Go To Spain!</span>
+					<span class="number">100••••••02</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">가족 여행</span>
+							<span class="number">300••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">함께 쓰는 통장</span>
+							<span class="number">200••••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->
+
+			<!--input_password-->
+			<div class="input_password bd1">
+				<span class="input_div alignC pass">
+					<a href="#" onclick="return false">● ● ● ●</a>
+				</span>
+			</div>
+			<!--//input_password-->
+
+		</div>
+
+		<div class="middle_price outpadding">
+			<dl class="clearfix">
+				<dt>출금가능금액</dt>
+				<dd><span>941,478원</span></dd>
+			</dl>
+		</div>
+
+		<div class="account_form outpadding mt20">
+			<span class="tl">받는 계좌</span>
+			<!--account_select-->
+			<span class="account_select mt10 ico_none">
+				<a href="#" id="accountDefault" class="normal">
+					<span class="text">마이로보(Fund) 100••••••02</span>
+					<span class="number">현재잔액 100,000 원</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">마이로보(fund) 100••••••02</span>
+							<span class="number">현재잔액 100,000 원</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">신한은행 308541345662</span>
+							<span class="number">예금주 홍길동</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">마이로보(ETF) 100••••••02</span>
+							<span class="number">현재잔액 1000,000 원</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->
+		</div>
+
+		<div class="transfor_form mt25">
+			<span class="tl">이체 금액</span>
+			<div class="account_input">
+				<span class="input">
+					<label><input id="wow" type="tel"  value="123456"/></label>
+				</span>
+				<a href="#" class="clear"><i class="txtClear"></i></a>
+			</div>
+			<div class="sel_amount">
+				<ul class="clearfix">
+					<li><a href="#" class="btn mini">100만</a></li>
+					<li><a href="#" class="btn mini">50만</a></li>
+					<li><a href="#" class="btn mini">10만</a></li>
+					<li><a href="#" class="btn mini">1만</a></li>
+					<li><a href="#" class="btn mini">전액</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="outpadding">
+			<a href="#" class="btn gray">이체하기</a>
+			<!--<a href="#" class="btn important">이체하기</a>-->
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+<script>
+$(function(){
+	
+	$("#wow").on("click touchstart", function(){
+		var length = $(this).val().length; 
+		console.log(length);
+<!--		$("#wow").selectRage(length, length);-->
+		window.clipboardData.setData("Text", $(this).val() );
+	});
+	
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>통장만들기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+    <!--## processBar 170724fix 텍스트 수정##-->
+	<div class="processBar">
+		<span class="text">신청서를 입력해주세요</span>
+		<div class="step">
+			<i class="bl_step"></i>
+			<i class="bl_step on"></i>
+			<i class="bl_step"></i>
+		</div>
+	</div>
+    <!--##// processBar ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+        <div class="note group">
+			<div class="sub">
+				<h2 class="title pb0">
+					로그인 아이디/비밀번호 등록
+					<i class="bl_noti"></i>
+				</h2>
+				<div>
+					<span class="input" style="width:100%;">
+						<label><input type="text" placeholder="아이디" maxlength="8"></label>
+					</span>
+					<span class="input_div mt10" style="width:100%;">
+						<a href="#" onclick="return false"><span class="t_gray2">비밀번호</span> ● ● ● ● ● ● </a><!--세이프 토큰 후 옆 마스킹 텍스트로 바뀜-->
+					</span>
+					<span class="input_div mt10" style="width:100%;">
+						<a href="#" onclick="return false"><span class="t_gray2">비밀번호 확인</span> ● ● ● ● ● ● </a><!--세이프 토큰 후 옆 마스킹 텍스트로 바뀜-->
+					</span>
+				</div>
+			</div>
+        </div>
+
+		<div class="note group">
+
+			<div class="sub">
+				<h2 class="title pb0">
+					직장 주소를 입력해주세요.
+					<i class="bl_noti"></i>
+				</h2>
+				<!-- 직장이 없을 경우 "자택 주소를 입력해주세요." 로 변경 -->
+				<div class="mt20">
+					<a href="#" class="btn normal">주소찾기</a>
+				</div>
+				<!-- 주소 검색 후  -->
+				<!--<div class="licence_input st2 clearfix mt20">
+					<span class="input">
+						<label><input type="text" value="34259" placeholder="우편번호" maxlength="5" readonly="readonly"></label>
+					</span>
+					<a href="#" class="btn mini">주소찾기</a>
+				</div>
+				<span class="input mt10" style="width:100%;">
+					<label><input type="text" value="서울시 강남구 역삼동 681-1" placeholder="주소입력1" readonly="readonly"></label>
+				</span>
+				<span class="input mt10" style="width:100%;">
+					<label><input type="text" placeholder="상세주소 입력"></label>
+				</span>-->
+
+				<!-- 170724fix input이 아닌 div 형태로 바뀌어져야 함-->
+				<div class="licence_input input_div st2 mt10 clearfix"  style="width:100%;">
+					<a href="#" onclick="return false" class="text">34259</a>
+					<a href="#" class="btn mini">주소찾기</a>
+				</div>
+
+				<span class="input_div mt10" style="width:100%;">
+					<a href="#" onclick="return false">서울시 강남구 역삼동 681-1 </a>
+				</span>
+
+				<span class="input_div mt10" style="width:100%;">
+					<a href="#" onclick="return false">강남빌딩 아카데미 하우스 4587-8758호 상세주소 담당자</a>
+				</span>
+				<!--// 170724fix input이 아닌 div 형태로 바뀌어져야 함-->
+
+
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">권리통보를 어디로 보낼까요?</h2>
+				<div class="inline_table col2 mt20">
+					<div class="cell">
+						<span class="radio focus">
+							<input type="radio" id="r1" name="rr" checked="">
+							<label for="r1"><span></span>직장수령</label>
+							<!-- 직장이 없을 경우 "자택수령" -->
+						</span>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r2" name="rr">
+							<label for="r2"><span></span>불원</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">체크 카드를 신청할까요?</h2>
+				<div class="inline_table col2 mt20">
+					<div class="cell">
+						<span class="radio focus">
+							<input type="radio" id="r3" name="rr2" checked="">
+							<label for="r3"><span></span>직장수령</label>
+							<!-- 직장이 없을 경우 "자택수령" -->
+						</span>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r4" name="rr2">
+							<label for="r4"><span></span>미신청</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">체크카드 거래내역을 문자로 보낼까요?</h2>
+				<span class="div_select mt20" style="width:100%;">
+					<a href="#" id="optionDefault1" class="">체크카드 거래내역 선택</a>
+				</span>
+			</div>
+
+        </div>
+
+		<div class="group">
+			<div class="sub">
+				<h2 class="title pb0">
+					통장/체크카드 비밀번호 등록
+					<i class="bl_noti"></i>
+				</h2>
+
+				<!-- 170717 mt10 클래스 추가-->
+				<div class="mt10 pb5">
+					<span class="input_div" style="width:100%;">
+						<a href="#" onclick="return false"><span class="t_gray2">비밀번호</span> ● ● ● ● ● ● </a><!--세이프 토큰 후 옆 마스킹 텍스트로 바뀜-->
+					</span>
+					<span class="input_div mt10" style="width:100%;">
+						<a href="#" onclick="return false"><span class="t_gray2">비밀번호 확인</span> ● ● ● ● ● ● </a><!--세이프 토큰 후 옆 마스킹 텍스트로 바뀜-->
+					</span>
+				</div>
+				<!--// 170717 -->
+			</div>
+
+			<div class="btnArea two outpadding mt20">
+				<a href="#;" class="btn normal">이전</a>
+				<a href="#;" class="btn important">다음</a>
+			</div>
+        </div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

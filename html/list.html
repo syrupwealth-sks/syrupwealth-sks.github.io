@@ -1,0 +1,1073 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script src="common/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// menu name/////////////////////////////////////////////////////////////////////////////////
+				//$("a[href^='../VD/html/benefit/02_b08']").prepend("<span class='wooc'>온라인쿠폰</span>");
+				//$("a[href^='../VD/html/benefit/02_b09']").prepend("<span class='wooc'>포인트쓰기_포인트특권</span>");
+				//$("a[href^='../VD/html/benefit/02_b10']").prepend("<span class='wooc'>포인트쌓기_광고,앱설치</span>");
+				//$("a[href^='../VD/html/benefit/02_b11']").prepend("<span class='wooc'>포인트쌓기_적립신청</span>");
+				//$("a[href^='../VD/html/benefit/02_b12']").prepend("<span class='wooc'>포인트쌓기_제휴카드</span>");
+				// menu name/////////////////////////////////////////////////////////////////////////////////
+				$("a").attr("target", "mainFrame");
+				$("a").each(function() {
+					var temp = $(this).attr("href");
+					//var file_name = temp.split("/")[4];
+					$(this).append(temp);
+					var new_win = $(this).clone().attr('target', '_blank').attr('tabIndex', '-1').text('[새창]').css({
+						margin : '0 0 0 5px',
+						color : '#6197C0'
+					});
+					$(this).parent().append(new_win);
+				}).bind('click focus', function(event) {
+					$("a").removeClass('on');
+					$(this).addClass('on');
+				});
+				$("dt").bind('click focus', function() {
+					if ($(this).next("dd").hasClass("on")) {
+						$("dd").removeClass("on");
+					} else {
+						$("dd").removeClass("on");
+						$(this).next("dd").addClass("on");
+					};
+				});
+				$(".unit_length").each(function() {
+					var unitLength = $(this).parent().parent().next().find("li").length;
+					 $(this).text(unitLength);
+				});
+			});
+		</script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, input, td {
+				margin: 0;
+				padding: 0;
+				font-family: 돋움, Dotum, sans-serif;
+				font-style: normal;
+				font-size: 13px;
+				line-height: 14px;
+			}
+			body {
+				background-color: #fff;
+				padding-bottom: 30px;
+			}
+			ol, ul, dl {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			h1 {
+				width: 100%;
+				height: 35px;
+				padding: 10px 0 10px 15px;
+				color: #fff;
+				font-size: 16px;
+				font-weight: bold;
+				text-align: left;
+				letter-spacing: 1px;
+				background-color: #000;
+				box-sizing: border-box;
+			}
+			h1 span {
+				display: inline-block;
+				margin-top: 0px;
+				margin-right: -4px;
+				padding: 1px 3px;
+				border-radius: 3px;
+				color: #fff;
+				font-weight: normal;
+				font-size: 10px;
+			}
+			h1 span.red {
+				background-color: red;
+				margin-left: 7px;
+			}
+			h1 span.orange {
+				background-color: orange;
+			}
+			h1 span.blue {
+				background-color: blue;
+			}
+			dt {
+				font-size: 14px;
+				font-weight: bold;
+				padding: 10px;
+				border-top: 2px solid #ccc;
+				cursor: pointer;
+			}
+			dd {
+				display: none;
+			}
+			dd.on {
+				display: block !important;
+			}
+			ul {
+				margin: 0px 20px 20px 30px;
+			}
+			li {
+				position: relative;
+				margin-bottom: 5px;
+			}
+			a, a:hover, a:visited {
+				color: #999;
+				text-decoration: none;
+			}
+			a span {
+				margin-right: 1px;
+				display: inline-block;
+				color: #999;
+				font-size: 11px;
+			}
+			li.sub a span {
+				margin-left: -13px;
+			}
+			span.update {margin-right:10px;color:#005F8F;;}
+			a span.bl {
+				display: block;
+				position: absolute;
+				top: 16px;
+				left: -10px;
+				width: 6px;
+				height: 6px;
+				border-top: 0 none;
+				border-right: 0 none;
+				border-left: 1px;
+				border-bottom: 1px;
+				border-style: dotted;
+				border-color: #333;
+			}
+			a.on {
+				font-weight: bold;
+				letter-spacing: 0px
+			}
+			li.done a {
+				color: black;
+			}
+			li.done span {
+				color: red;
+			}
+			li.done span.bl {
+				color: #333;
+			}
+			li.done a.pop span {
+				color: orange;
+			}
+
+			li.ing a {
+				color: #555;
+			}
+			li.ing span {
+				color: orange;
+			}
+			li.ing span.bl {
+				color: #555;
+			}
+			li.ing a.pop span {
+				color: orange;
+			}
+
+			li.modify span {
+				color: blue;
+			}
+			.off {
+				display: block;
+			}
+			li.sub {background-color:#e5edf8;font-size:13px;font-weight:bold;padding:5px 0}
+			li.sub span {display:block;margin-left:-14px;color:#005f8f}
+			.wooc {color:#555;display: block}
+		</style>
+	</head>
+	<body>
+		<h1>공통.가이드</h1>
+		<dl>
+			<dt>
+				Style Guide &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">가이드</span> <a href="html/syrupwealth/guide.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">로보가이드</span> <a href="html/syrupwealth/guide2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이머니</span> <a href="html/syrupwealth/guide3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">레이아웃-일반</span> <a href="html/syrupwealth/layout.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">웹 레이어팝업</span> <a href="html/syrupwealth/rule_instyle.html"> </a>
+					</li>					
+					<li>
+						<span class="wooc">서비스약관</span>
+						<a href="html/syrupwealth/4.1.6.3.html"> </a>
+					</li>					
+				</ul>
+			</dd>
+		</dl>
+
+		<h1>메인</h1>
+
+		<dl>
+			<dt>메인 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">정회원 로그인 <span style="color: red;">전</span></span>
+						<a href="html/syrupwealth/0.0_regular_member_beforeLogin.html"></a>
+					</li>
+					<li>
+						<span class="wooc">정회원 로그인 <span style="color: blue;">후</span></span>
+						<a href="html/syrupwealth/0.0_regular_member_afterLogin.html"></a>
+					</li>
+					<li>
+						<span class="wooc">준회원</span>
+						<a href="html/syrupwealth/0.0_assosiate_member.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">비회원</span>
+						<a href="html/syrupwealth/0.0_non-member.html"> </a>
+					</li>
+				</ul>
+			</dd>
+
+		<dl>
+			<dt>와플(Wow People) &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">목록</span>
+						<a href="html/syrupwealth/0.1.html"></a>
+					</li>
+					<li>
+						<span class="wooc">상세, 공유P</span>
+						<a href="html/syrupwealth/0.1.1.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">상세 동영상(가비아)</span>
+						<a href="html/syrupwealth/0.1.1.1_mov.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">검색</span>
+						<a href="html/syrupwealth/0.1.1.2.html"> </a>
+					</li>
+				</ul>
+			</dd>
+
+
+			<dt>이벤트 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">목록</span>
+						<a href="html/syrupwealth/0.2.1.html"></a>
+					</li>
+					<li>
+						<span class="wooc">상세</span>
+						<a href="html/syrupwealth/0.2.1.1.html"></a>
+					</li>
+				</ul>
+			</dd>
+
+
+			<dt>SyrupWealth 소개 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">소개</span>
+						<a href="html/syrupwealth/2.0.html"> </a>
+					</li>
+				</ul>
+			</dd>
+
+			<dt>알림(긴급공지) &amp; 공지 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">공지</span>
+						<a href="html/syrupwealth/0.2.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">알림(긴급공지)</span>
+						<a href="html/syrupwealth/0.2.3.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				미리알려줌 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">미리알려줌 > 페이지 아이콘 유형</span>
+						<a href="html/syrupwealth/9.0.3_float.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">미리알려줌 > 리스트 페이지</span>
+						<a href="html/syrupwealth/9.0.3_page.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				설치페이지 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">IOS</span>
+						<a href="html/syrupwealth/0.1.1.3-1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">Android</span>
+						<a href="html/syrupwealth/0.1.1.3-2.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				404에러 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">404 에러</span>
+						<a href="html/syrupwealth/9.0.1.html"> </a>
+					</li>
+				</ul>
+			</dd>
+
+		</dl>
+
+		<h1>로보어드바이저</h1>
+		<dl>
+
+			<dt>
+				로보어드바이저 메인 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">4.0.로보 어드바이저 메인 준회원(계좌개설전)</span>
+						<a href="html/syrupwealth/4.0._main1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">4.0.1.로보 어드바이저 메인 정회원(계좌개설후)</span>
+						<a href="html/syrupwealth/4.0.1._main2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">4.3.로보 어드바이저 메인 정회원(로보가입후)</span>
+						<a href="html/syrupwealth/4.3._main3.html"> </a>
+					</li>
+				</ul>
+			</dd>
+
+			<dt>
+				포트폴리오 설문 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 1. 시작</span>
+						<a href="html/syrupwealth/4.1.1._start.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 1. 상품선택 케이스1</span>
+						<a href="html/syrupwealth/4.1.3._pd1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 1. 상품선택 케이스2</span>
+						<a href="html/syrupwealth/4.1.3._pd2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 2. 포트폴리오</span>
+						<a href="html/syrupwealth/4.1.2._poll.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 3. 투자목표 (여행)</span>
+						<a href="html/syrupwealth/4.1.4.1._goal1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 3. 투자목표 (결혼)</span>
+						<a href="html/syrupwealth/4.1.4.1._goal2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 3. 투자목표 (목돈)</span>
+						<a href="html/syrupwealth/4.1.4.1._goal3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 설문 > 4. 투자성향1</span>
+						<a href="html/syrupwealth/4.1.5.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 > 결과 (계좌개설 전)</span>
+						<a href="html/syrupwealth/4.1.6._case1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 > 결과 (로보가입 전)</span>
+						<a href="html/syrupwealth/4.1.6._case2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 > 결과 (로보가입 후)</span>
+						<a href="html/syrupwealth/4.1.6._case3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">문자로 받기 > 1단계</span>
+						<a href="html/syrupwealth/4.1.6.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">로보어드바이저 > 문자로 받기 > 2단계 > 문자발송 완료</span>
+						<a href="html/syrupwealth/4.1.6.4.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				가입하기 &nbsp;<span style="font-size:12px;">(<span style="color:blue"  class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">가입하기_계좌선택</span>
+						<a href="html/syrupwealth/4.2.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_투자권유희망1</span>
+						<a href="html/syrupwealth/4.3.1.4.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_투자권유희망2</span>
+						<a href="html/syrupwealth/4.3.1.4.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_투자성향 part1</span>
+						<a href="html/syrupwealth/3.1.10.2._part1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_투자성향 part2</span>
+						<a href="html/syrupwealth/3.1.10.8._part2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_투자성향 part3 투자목적</span>
+						<a href="html/syrupwealth/4.3.1.4.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_결과 > 요약</span>
+						<a href="html/syrupwealth/3.1.10.9.summery.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">투자정보등록/변경_결과 > 상세</span>
+						<a href="html/syrupwealth/3.1.10.9.detail.html"> </a>
+					</li>
+					<li>
+						<span class="wooc" style="color: red;">투자정보등록/변경_결과 > 요약, 상세</span>
+						<a href="html/syrupwealth/3.1.10.9_all.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">가입하기_위험고지(ETN)</span>
+						<a href="html/syrupwealth/4.3.1.2.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">가입하기_위험고지_펀드ETF</span>
+						<a href="html/syrupwealth/4.3.1.2.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">가입하기_위험고지_펀드ETF(약관)</span>
+						<a href="html/syrupwealth/4.3.1.2.6.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">로보어드바이저 > 가입하기 > 완료 > 문자발송 완료</span>
+						<a href="html/syrupwealth/4.2.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">가입내역/해지</span>
+						<a href="html/syrupwealth/4.3.9.html"> </a>
+					</li>
+
+				</ul>
+			</dd>
+			<dt>
+				거래 &nbsp;<span style="font-size:12px;">(<span style="color:blue"  class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">포트폴리오 매수_계좌선택</span>
+						<a href="html/syrupwealth/4.3.1.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_계좌선택(계좌번호 복사 팝업)</span>
+						<a href="html/syrupwealth/4.3.1.1_pop.html"> </a>
+					</li>					
+					<li>
+						<span class="wooc">고객 안내사항 > 시간외 P (펀드, ETF)</span>
+						<a href="html/syrupwealth/4.3.1.5.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_설명서(펀드)</span>
+						<a href="html/syrupwealth/4.3.1.6_ANDROID.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_설명서(펀드)</span>
+						<a href="html/syrupwealth/4.3.1.6_IOS.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_위험고지(레버리지ETF)</span>
+						<a href="html/syrupwealth/4.3.1.2.4.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_2.투자성향(펀드)</span>
+						<a href="html/syrupwealth/4.3.1.2.5.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_2.투자성향(ETF)</span>
+						<a href="html/syrupwealth/4.3.1.2.5_etf.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_매수확인(펀드)</span>
+						<a href="html/syrupwealth/4.3.1.7_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_매수확인(ETF)</span>
+						<a href="html/syrupwealth/4.3.1.7_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수 > 2.투자금액부족 (펀드, ETF)</span>
+						<a href="html/syrupwealth/4.3.1.2.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_매수완료(펀드)</span>
+						<a href="html/syrupwealth/4.3.1.8_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매수_매수완료(ETF)</span>
+						<a href="html/syrupwealth/4.3.1.8_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매도_계좌선택(ETF)</span>
+						<a href="html/syrupwealth/4.3.3.1_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매도_계좌선택(펀드)</span>
+						<a href="html/syrupwealth/4.3.3.1_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매도_매도완료(ETF)</span>
+						<a href="html/syrupwealth/4.3.3.4_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 매도_매도완료(펀드)</span>
+						<a href="html/syrupwealth/4.3.3.4_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_계좌선택(ETF)</span>
+						<a href="html/syrupwealth/4.3.4.1_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_계좌선택(펀드)</span>
+						<a href="html/syrupwealth/4.3.4.1_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_계좌선택(추가매수)</span>
+						<a href="html/syrupwealth/4.3.4.2.html"> </a>
+					</li>
+					<!--
+					<li>
+						<span class="wooc">포트폴리오 조정_조정확인(펀드)_매도</span>
+						<a href="html/syrupwealth/4.3.4.3_FUND_sell.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_조정확인(펀드)_매수</span>
+						<a href="html/syrupwealth/4.3.4.3_FUND_buying.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_조정확인(ETF)</span>
+						<a href="html/syrupwealth/4.3.4.3_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_조정완료(펀드)_매도</span>
+						<a href="html/syrupwealth/4.3.4.4_FUND_sell.html"> </a>
+					</li>
+					-->
+					<li>
+						<span class="wooc">포트폴리오 조정_조정완료(펀드)_매수</span>
+						<a href="html/syrupwealth/4.3.4.4_FUND_buying.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오 조정_조정완료(ETF)</span>
+						<a href="html/syrupwealth/4.3.4.4_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">매매내역(FUND)</span>
+						<a href="html/syrupwealth/4.3.5.1_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">조회내역 없음</span>
+						<a href="html/syrupwealth/4.3.5.1_none.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">매매내역(ETF)</span>
+						<a href="html/syrupwealth/4.3.5.2_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">매매취소_계좌비밀번호입력(펀드)</span>
+						<a href="html/syrupwealth/4.3.6.1_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">매매취소_계좌비밀번호입력(ETF)</span>
+						<a href="html/syrupwealth/4.3.6.1_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">매매취소_취소완료(FUND)</span>
+						<a href="html/syrupwealth/4.3.6.3_FUND.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">매매취소_취소완료(ETF)</span>
+						<a href="html/syrupwealth/4.3.6.3_ETF.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오내역(펀드,ETF)</span>
+						<a href="html/syrupwealth/4.3.10.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">포트폴리오내역(준회원)</span>
+						<a href="html/syrupwealth/4.3.10.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">입금캘린더(펀드)</span>
+						<a href="html/syrupwealth/4.3.7.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">리포트</span>
+						<a href="html/syrupwealth/4.3.8.html"> </a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+
+
+		<h1>계좌개설</h1>
+		<dl>
+		    <dt>
+		        통장만들기 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+		    </dt>
+				<dd>
+					<ul>
+						<li>
+				        <span class="wooc ct">메인(정회원, 준회원)</span>
+				        <a href="html/syrupwealth/3.0.html"> </a>
+				    </li>
+						<li>
+							<span class="wooc ct">이용안내(정회원, 준회원)</span>
+							<a href="html/syrupwealth/3.0.3.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">휴대폰 인증(준회원)</span>
+							<a href="html/syrupwealth/3.1.1.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">이어하기</span>
+							<a href="html/syrupwealth/3.1.1.6-1.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">신분증 확인 실패</span>
+							<a href="html/syrupwealth/3.1.4.1.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">약관동의</span>
+							<a href="html/syrupwealth/3.1.2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc yt">마케팅동의(계좌개설하기 공통)</span>
+							<a href="html/syrupwealth/3.1.9.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">신분증 제출 > 안내</span>
+							<a href="html/syrupwealth/3.1.3.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">신분증 제출 > 전송(주민등록증, 면허증)</span>
+							<a href="html/syrupwealth/3.1.3.2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">금융기관 계좌인증</span>
+							<a href="html/syrupwealth/3.1.4.html"> </a>
+						</li>
+						<!-- <li>
+							<span class="wooc ct">계좌개설신청서_정보입력(직장O,X) <span style="color: red;">아래 두페이지 참고</span></span>
+							<a href="html/syrupwealth/3.1.5.html"> </a>
+						</li> -->
+						<li>
+							<span class="wooc ct">계좌개설신청서_정보입력(직장O,X) 첫번째</span>
+							<a href="html/syrupwealth/3.1.5_1.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">계좌개설신청서_정보입력(직장O,X) 두번째</span>
+							<a href="html/syrupwealth/3.1.5_2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정보입력(직장O,X) > 주소찾기P_통합검색(검색결과 많음 포함)</span>
+							<a href="html/syrupwealth/3.1.5.2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정보입력(직장O,X) > 주소찾기P_통합검색(검색결과 없음)</span>
+							<a href="html/syrupwealth/3.1.5.2_none.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정보입력(직장O,X) > 주소찾기P_도로명검색</span>
+							<a href="html/syrupwealth/3.1.5.3.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정보입력(직장O,X) > 주소찾기P_상세주소입력</span>
+							<a href="html/syrupwealth/3.1.5.4.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">금융거래목적확인서O, 신분증확인O</span>
+							<a href="html/syrupwealth/3.1.6.html"> </a>
+						</li>
+						<li>
+							<span class="wooc yt">금융거래목적확인서O, 신분증확인X > 신분증 진위여부 확인</span>
+							<a href="html/syrupwealth/3.1.7.1.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정해진 자릿수의 비밀번호 입력 > 세이프토큰 비밀번호 입력</span>
+							<a href="html/syrupwealth/3.1.7.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정해진 자릿수의 비밀번호 입력 > 세이프토큰 비밀번호 입력/불일치/등록</span>
+							<a href="html/syrupwealth/3.1.7-2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정해진 자릿수의 비밀번호 입력 > 주민번호 뒤 7자리</span>
+							<a href="html/syrupwealth/3.1.7-4.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">정해지지 않은 자릿수의 비밀번호 입력 > 로그인 비밀번호</span>
+							<a href="html/syrupwealth/3.1.7-3.html"> </a>
+						</li>
+						<li>
+							<span class="wooc yt">이체안내</span>
+							<a href="html/syrupwealth/3.1.8.html"> </a>
+						</li>
+						<li>
+							<span class="wooc ct">임시개설계좌 확인</span>
+							<a href="html/syrupwealth/3.1.1.6-2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc yt">개설완료(디자인변경)</span>
+							<a href="html/syrupwealth/3.1.10.html"> </a>
+						</li>
+						<li>
+							<span class="wooc yt">상품선택</span>
+							<a href="html/syrupwealth/3.2.2.html"> </a>
+						</li>
+						<li>
+							<span class="wooc yt">계좌인증</span>
+							<a href="html/syrupwealth/3.2.5.html"> </a>
+						</li>
+					</ul>
+				</dd>
+
+				<dt>
+		        만든내역보기 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+		    </dt>
+		    <dd>
+				<ul>
+					<li>
+			        	<span class="wooc yt">개설내역_있음</span>
+			        	<a href="html/syrupwealth/3.3.2.html"> </a>
+			      	</li>
+							<li>
+			        	<span class="wooc yt">개설내역_없음</span>
+			        	<a href="html/syrupwealth/3.3.2-1.html"> </a>
+			      	</li>
+		    	</ul>
+		  	</dd>
+		</dl>
+
+
+		<h1>마이머니</h1>
+		<dl>
+
+			<dt>
+				마이로보 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">마이로보 > 요약_손익</span>
+						<a href="html/syrupwealth/6.5.1_tab1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이로보 > 요약_수익률</span>
+						<a href="html/syrupwealth/6.5.1_tab2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이로보 > 요약_상세</span>
+						<a href="html/syrupwealth/6.5.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이로보 > 목표달성도(결혼)</span>
+						<a href="html/syrupwealth/6.5.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이로보 > 목표달성도(여행)</span>
+						<a href="html/syrupwealth/6.5.3-2.html"> </a>
+					</li>
+															<li>
+						<span class="wooc">마이로보 > 목표달성도(목돈)</span>
+						<a href="html/syrupwealth/6.5.3-3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이박스</span>
+						<a href="html/syrupwealth/6.8.1.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이박스 조회내역 없음</span>
+						<a href="html/syrupwealth/6.8.1.1_none.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				마이피그 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">마이피그 > 전체/입금/출금T</span>
+						<a href="html/syrupwealth/6.6.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이피그 > 이자T</span>
+						<a href="html/syrupwealth/6.6.4.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이피그 > 거래상세</span>
+						<a href="html/syrupwealth/6.6.6.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이피그 > MY 자산</span>
+						<a href="html/syrupwealth/6.6.6_asset.html"> </a>
+					</li>				
+					
+				</ul>
+			</dd>
+			<dt>
+				마이카드 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">마이카드 > 이용내역</span>
+						<a href="html/syrupwealth/6.7.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이카드 > 카드혜택</span>
+						<a href="html/syrupwealth/6.7.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">마이카드 > 이용안내</span>
+						<a href="html/syrupwealth/6.7.3.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				이체 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">이체 > 1.계좌선택</span>
+						<a href="html/syrupwealth/6.6.5.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">이체 > 2.정보확인</span>
+						<a href="html/syrupwealth/6.6.5.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">이체 > 3.이체완료</span>
+						<a href="html/syrupwealth/6.6.5.3.html"> </a>
+					</li>
+				</ul>
+			</dd>
+			<dt>
+				설정 &nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span>
+			</dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">설정</span>
+						<a href="html/syrupwealth/7.0.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 소식알림</span>
+						<a href="html/syrupwealth/7.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 개인정보 변경</span>
+						<a href="html/syrupwealth/7.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 개인정보 변경 > 신분증제출 > 안내(계좌개설 공통 7.2.1)</span>
+						<a href="html/syrupwealth/3.1.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 개인정보 변경 > 신분증제출 > 전송(계좌개설 공통 7.2.2)</span>
+						<a href="html/syrupwealth/3.1.3.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 계좌별칭 변경</span>
+						<a href="html/syrupwealth/7.4.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 간편인증 현재 비밀번호 변경</span>
+						<a href="html/syrupwealth/7.5.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 간편인증 새 비밀번호 입력</span>
+						<a href="html/syrupwealth/7.5.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 간편인증 새 비밀번호 확인</span>
+						<a href="html/syrupwealth/7.5.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 계좌/카드 비밀번호 변경</span>
+						<a href="html/syrupwealth/7.6.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 계좌/카드 현재 비밀번호 변경(7.6.2 동일)</span>
+						<a href="html/syrupwealth/7.5.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 계좌/카드 새 비밀번호 입력(7.6.3 동일)</span>
+						<a href="html/syrupwealth/7.5.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 지문등록</span>
+						<a href="html/syrupwealth/7.7.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 지문등록 완료</span>
+						<a href="html/syrupwealth/7.7.1_1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 지문해지</span>
+						<a href="html/syrupwealth/7.7.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 지문해지 완료</span>
+						<a href="html/syrupwealth/7.7.2_1.html"> </a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+
+		<h1>체크카드</h1>
+		<dl>
+			<dt>카드신청&nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">메인</span>
+						<a href="html/syrupwealth/10.0.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">본인확인</span>
+						<a href="html/syrupwealth/10.0.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">약관동의</span>
+						<a href="html/syrupwealth/10.0.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">정보확인</span>
+						<a href="html/syrupwealth/10.0.4.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">신청완료</span>
+						<a href="html/syrupwealth/10.0.5.html"> </a>
+					</li>
+				</ul>
+			<dd>
+				<dt>마이카드&nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+				<dd>
+					<ul>
+						<li>
+							<span class="wooc">보유카드조회</span>
+							<a href="html/syrupwealth/10.0.6.html"> </a>
+						</li>
+					</ul>
+				</dd>
+		</dl>
+
+		<h1>간편인증(세이프토큰)</h1>
+		<dl>
+			<dt>간편인증&nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">로그인/주문검증P > 숫자 6자리</span>
+						<a href="html/syrupwealth/11.0.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 이용안내</span>
+						<a href="html/syrupwealth/11.0.2.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">설정 > 휴대폰인증</span>
+						<a href="html/syrupwealth/11.0.2.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">신분증제출 > 안내</span>
+						<a href="html/syrupwealth/11.0.2.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">신분증제출 > 전송</span>
+						<a href="html/syrupwealth/11.0.3.1.1.html"> </a>
+					</li>
+					<!--<li>
+						<span class="wooc">갱신 > 이용안내</span>
+						<a href="html/syrupwealth/11.0.3.1.html"> </a>
+					</li>  170724 제외됨-->
+				</ul>
+			</dd>
+		</dl>
+
+		<h1>고객센터</h1>
+		<dl>
+			<dt>고객센터&nbsp;<span style="font-size:12px;">(<span style="color:blue" class="unit_length"> 0 </span>)</span></dt>
+			<dd>
+				<ul>
+					<li>
+						<span class="wooc">안내</span>
+						<a href="html/syrupwealth/5.1.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">상담글 남기기</span>
+						<a href="html/syrupwealth/5.2.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">상담글 확인</span>
+						<a href="html/syrupwealth/5.3.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">상담글 확인없음</span>
+						<a href="html/syrupwealth/5.3_none.html"> </a>
+					</li>
+					<li>
+						<span class="wooc">상담 예약하기</span>
+						<a href="html/syrupwealth/5.4.html"> </a>
+					</li>					
+				</ul>
+			</dd>
+		</dl>
+
+	</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ## 상단 fixed처리로 네이티브처리되는 타이틀을 없앰
+	<div class="pageTitle">
+    	<i class="pageBack"></i>
+    	<span>통장만들기</span>
+	</div>##// titlArea ##-->
+
+    <!--## processBar ##-->
+    <!-- 170724fix fixed 인스타일로 처리 -->
+	<div class="processBar" style="position: fixed; width:86.5%; -webkit-width: calc(100% - 50px); width:calc(100% - 50px); top:0; left:0;  height:20px;  z-index:5;"> 
+		<span class="text">진행중인 내역이 있습니다.</span>
+		<!-- 170719fix 추가 -->
+		<div class="step">
+			<i class="bl_step"></i>
+			<i class="bl_step on"></i>
+			<i class="bl_step"></i>
+		</div>
+		<!--// 170719fix 추가 -->
+	</div>
+    <!--// 170724fix fixed 인스타일로 처리 -->
+    <!--##// processBar ##-->
+
+	<!--## contentArea ##-->
+	<!-- 170719fix in_fixed 클래스 추가-->
+	<div class="contentArea in_fixed">
+	<!--// 170719fix in_fixed 클래스 추가-->
+
+        <div class="note check">
+            <!-- 170724fix fixed 인스타일로 처리 -->
+            <div class="tt"  style="position: fixed; width:86.5%; -webkit-width: calc(100% - 50px); width:calc(100% - 50px);  top:45px; left:0; height:35px; background:#fff; border-bottom:1px solid #d9d9d9; z-index:5;">
+                <input type="checkbox" id="c1" name="" class="big">
+                <label for="c1" style="height:auto;">
+                    <span></span>
+                    동의하고 본인 인증하기
+                </label>
+            </div>
+            <!--// 170724fix fixed 인스타일로 처리 -->
+            <ul class="list_manual" style="margin-top:110px;">
+                <li>
+                    <a href="#">
+                        <span>개인(신용)정보 수집 이용·제공 동의서</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>대표 계좌 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>불법 차명거래 금지 설명 확인서</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>온라인 채널 서비스 이용 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>전자금융이용에  관한 기본 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>은행이체 거래 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>계좌대체서비스 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list_manual">
+                <li>
+                    <a href="#">
+                        <span>매매거래계좌설정 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>매매주문 접수, 처리 등에 대한 설명</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>RP형 CMA 가입 설명서</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <!-- 170724fix 링크를 하나로 -->
+                <li>
+                    <a href="#"  style="line-height:20px; padding-top:5px;">
+                        <span>(환매조건부 매매)종목 대체 사전동의 및 통지 방법 확인</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+                <!-- 170724fix 링크를 하나로 -->
+            </ul>
+            <ul class="list_manual">
+                <li>
+                    <a href="#">
+                        <span>체크카드 개인 약관</span>
+                        <i class="right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btnArea">
+            <!-- 동의 전 (비활성화)-->
+            <a href="#;" class="btn gray">다음</a>
+            <!-- 동의 후 (활성화)-->
+            <a href="#;" class="btn important">다음</a>
+        </div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

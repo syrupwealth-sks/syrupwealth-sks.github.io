@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>포트폴리오 매수</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea in_fixed">
+		<!--processBar-->
+		<div class="processBar">
+			<span class="text">투자설명서를 확인해주세요</span>
+			<!-- 170724fix 삭제
+			<div class="step">
+				<i class="bl_step"></i>
+				<i class="bl_step on"></i>
+				<i class="bl_step"></i>
+			</div>-->
+		</div>
+		<!--//processBar-->
+
+		<!--note_check 170724fix 안드로이드일경우 토글-->
+		<script type="text/javascript">		
+			$(function(){
+
+				$(".note.check.android_check .tt :checkbox").on("androidCheckEv", function() {//안드로이드 토글
+					$(this).off("click").on("click", function() {
+						if($(this).is(":checked")){
+							$(".note.android_check .tt2").slideDown("fast");
+						}else{
+							$(".note.android_check .tt2").slideUp("fast");
+						}
+					});
+				}).trigger("androidCheckEv");//end
+				//$(".note.check.android_check .tt :checkbox").triggr("androidCheckEv");//안드로이드 토글 재사용시
+			});	
+		</script>	
+		<div class="note check android_check"><!--안드로이드일경우 클래스 "android_check"추가-->
+			<div class="tt">
+				<input type="checkbox" id="a1" name=" " class="big">
+				<label for="a1">
+					<span></span>
+					포트폴리오 간이투자설명서 일괄 확인
+				</label>
+			</div>
+			
+			<div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b1" name=" " class="small normal_r">
+                <label for="b1">
+                    <span></span>
+                    미래국공채전용MMFA1호(국공채)C
+                </label>
+            </div>
+            <div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b2" name=" " class="small normal_r">
+                <label for="b2">
+                    <span></span>
+                    신영고배당증권자(주식)-A
+                </label>
+            </div>
+            <div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b3" name=" " class="small normal_r">
+                <label for="b3">
+                    <span></span>
+                    NH-Amundi Allset성장중소형(주식)A1
+                </label>
+            </div>
+            <div class="tt2">
+				<i class="right"></i>
+                <input type="checkbox" id="b4" name=" " class="small normal_r">
+                <label for="b4">
+                    <span></span>
+                    이스트스프링미국뱅크론특별자(H)C-E
+                </label>
+            </div>
+		</div>
+		<!--//note_check 170724fix 안드로이드일경우 토글-->
+
+		<!--note_agree 170724fix 삭제
+		<div class="note_agree note">
+			<p>고객님의 투자성향은 위험중립형으로 투자 상품중
+			<mark>공격투자형 상품이 존재</mark>하여 투자제한이 있습니다.<br/>
+			고객님의 투자성향과 관계없이 투자를 진행하시려면 아래 동의 
+			버튼을 선택해 주시기 바랍니다. 이에 따른 투자 손실에 대한 책임은 
+			고객님께 있습니다 </p>
+
+			<div class="btnWrap two mt20">
+				<a href="#" class="btn normal">취소</a>
+				<a href="#" class="btn important">동의</a>
+			</div>
+		</div>-->
+
+		<!--note_confirm-->
+		<div class="note_confirm">
+			<div class="tt">
+				<input type="checkbox" id="a3" name=" " class="small normal_r">
+				<label for="a3">
+					<span></span>
+					설명서를 제공받았고, 그 주요내용을 이해했습니다.
+				</label>
+			</div>
+		</div>
+		<!--//note_confirm-->
+
+		<!--toggle_list-->
+		<ul class="toggle_list clearfix">
+			<li>
+				<a href="#" class="igep">금융 소비자보호 주요내용 <!--<i class="down"></i>--></a>
+				<div class="toggle_cont">
+					<mark>중도해지 시 환매수수료가 발생</mark>될 수 있으며, 펀드내 편입자산의 매각이 불가능한 경우 등으로 인해 펀드의 <mark>환매가 연기</mark>될 수 있습니다.<br/><br/>
+
+					<mark>파생결합증권이 편입된 펀드</mark>의 경우 중도 환매 시 수익률은 환매에 따른 편입자산 매각비용 및 높은 환매수수료로 인하여 조건에 따라 제시되는 수익률보다 낮아질 수 있습니다. 이 경우 원금보장형 상품이라 하더라도 <mark>원금손실이 발생할 수 있습니다.</mark><br/><br/>
+
+					<mark>정기지급식(월지급식 등) 펀드</mark>는 펀드운용결과에 따라 정기 지급액이 변동되거나 납입원금이 감소될 수 있으며, 경우에 따라 정기지급이 조기 중단될 수 있습니다.<br/><br/>
+
+					<mark>투자금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담</mark>하며, 펀드의 운용사가 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다.
+				</div>
+			</li>	
+			<li>
+				<a href="#" class="igep">설명서 주요내용 확인사항 <!--<i class="down"></i>--></a>
+				<div class="toggle_cont">
+					상품의 내용, 핵심 투자위험 (신용위험, 시장위험, 환위험 등), 원금손실 가능성 (예금자 보호법상 보호상품 아님*), 수수료, 조기상환조건, 계약의 해제, 해지에 관한 사항에 대하여 이해하였습니다.<br/><br/>
+					<!--170818 아래 "·" 추가 -->
+					· 금융투자상품이 아닌 현금예수금(위탁자예수금, 수익자예수금), 신용거래계좌설정보증금, 신용공여담보금 등 일부담보금, 비과세종합저축 등 저축자예수금은 예금자보호법에 따른 예금자 보호 대상임						
+				</div>
+			</li>												
+		</ul>
+		<!--//toggle_list-->
+
+		<div class="btnArea two mt25 outpadding">
+				<a href="#" class="btn normal">이전</a>
+				<a href="#" class="btn important">다음</a>
+		</div>
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

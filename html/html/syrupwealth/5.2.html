@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>상담글 남기기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<div class="processBar">
+		<span class="text">상담글을 남겨주세요</span>
+	</div>
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+
+			<span class="input mt10" style="width:100%;">
+				<!-- 170724fix 인풋타입	 tel로 변경 -->
+				<label><input type="tel" value="010-1234-3456" placeholder="휴대폰 번호"></label>
+				<!--// 170724fix 인풋타입	 tel로 변경 -->
+			</span>
+
+			<span class="input mt10" style="width:100%;">
+				<label><input type="text" placeholder="제목"></label>
+			</span>
+
+			<textarea name="" id="" class="counsel_txt mt25" placeholder="문의하실 내용을 입력해주세요. 문의내용과 상관없는 내용은 약관에 의해 제재를 받을 수 있습니다."></textarea>
+
+			<div class="file_upload_group">
+
+				<form>
+					<div class="justify mt25">
+						<h2 class="title fl mt15">사진 첨부하기&nbsp;<span class="fileupload_cnt"></span></h2>
+						<label data-fileupload-trigger="" for="file1" class="btn mini fr">
+							<i class="clip"></i>
+							사진 선택
+						</label>
+					</div>
+
+					<div class="file_list mt15">
+						<!-- 170724fix 띄어쓰기  -->
+						<p class="no_data">선택된 사진이 없습니다</p>
+						<!--// 170724fix 띄어쓰기  -->
+						<!-- 파일 갯수는 최대 4개까지 -->
+					</div>
+				</form>
+
+			</div>
+
+			<div class="btnArea two mt25">
+				<a href="#" class="btn normal">이 전</a>
+				<a href="#" class="btn gray">등록</a>
+			</div>
+
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+<script>
+
+
+var files = $('.file_upload_group').fileupload({
+	fileLength: 4,
+	inputIDPrefix: 'imagefile',
+	exeedAlertMsg: '첨부파일은 4개까지만 선택 가능합니다.'
+});
+
+$(function() {
+
+	$('.btnArea .btn.gray').on("click", function () {
+		console.log(files.serialize());
+	});
+
+});
+</script>
+
+</body>
+</html>

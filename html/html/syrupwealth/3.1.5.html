@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>통장만들기</span>
+	</div>
+	<!--##// titlArea ##-->
+
+    <!--## processBar ##-->
+	<div class="processBar">
+		<span class="text">타 금융기관 계좌인증을 위해 정보를 입력해주세요</span>
+		<div class="step">
+			<i class="bl_step"></i>
+			<i class="bl_step on"></i>
+			<i class="bl_step"></i>
+		</div>
+	</div>
+    <!--##// processBar ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+        <div class="note group">
+			<div class="sub">
+				<h2 class="title pb0">
+					로그인 아이디/비밀번호 등록
+					<i class="bl_noti"></i>
+				</h2>
+				<div>
+					<span class="input" style="width:100%;">
+						<label><input type="text" placeholder="아이디"></label>
+					</span>
+					<span class="input_div mt10" style="width:100%;">
+						<a href="#" onclick="return false">비밀번호● ● ● ● ● ● </a>
+					</span>
+					<span class="input_div mt10" style="width:100%;">
+						<a href="#" onclick="return false">비밀번호 확인● ● ● ● ● ● </a>
+					</span>
+				</div>
+				<ul class="normal_list mt20 pb5">
+					<li>고객님의 <mark>안전한 금융거래 계좌 개설</mark>을 위한 <mark>ID 및 Password 등록 절차</mark>입니다. </li>
+				</ul>
+			</div>
+        </div>
+
+		<div class="note group">
+			<div class="sub">
+				<h2 class="title pb0">직장이 있으신가요?</h2>
+				<div class="inline_table col2 mt20">
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r1" name="rr1">
+							<label for="r1"><span></span>네</label>
+						</span>
+						<p class="ex">예) 회사원,자영업</p>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r2" name="rr1">
+							<label for="r2"><span></span>아니오</label>
+						</span>
+						<p class="ex">예) 주부, 학생, 기타</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">
+					직장 정보를 입력해주세요.
+				</h2>
+				<span class="input" style="width:100%;">
+					<label><input type="text" placeholder="직장명"></label>
+				</span>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">
+					직장 주소를 입력해주세요.
+					<i class="bl_noti"></i>
+				</h2>
+				<!-- 직장이 없을 경우 "자택 주소를 입력해주세요." 로 변경 -->
+				<div class="mt20">
+					<a href="#" class="btn normal">주소찾기</a>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">권리통보를 어디로 보낼까요?</h2>
+				<div class="inline_table col2 mt20">
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r1" name="rr">
+							<label for="r1"><span></span>직장수령</label>
+							<!-- 직장이 없을 경우 "자택수령" -->
+						</span>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r2" name="rr">
+							<label for="r2"><span></span>불원</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">체크 카드를 신청할까요?</h2>
+				<div class="inline_table col2 mt20">
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r3" name="rr2">
+							<label for="r3"><span></span>직장수령</label>
+							<!-- 직장이 없을 경우 "자택수령" -->
+						</span>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r4" name="rr2">
+							<label for="r4"><span></span>미신청</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">체크카드 거래내역을 문자로 보낼까요?</h2>
+				<div class="inline_table row pb5">
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r5" name="rr3">
+							<label for="r5"><span></span>5만원이상 (무료)</label>
+						</span>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r6" name="rr3">
+							<label for="r6"><span></span>전체 (월 300원)</label>
+						</span>
+					</div>
+					<div class="cell">
+						<span class="radio">
+							<input type="radio" id="r7" name="rr3">
+							<label for="r7"><span></span>미신청</label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+        </div>
+
+		<div class="note group">
+			<div class="sub">
+				<h2 class="title pb0">
+					통장/체크카드 비밀번호 등록
+					<i class="bl_noti"></i>
+				</h2>
+				<div class="pb5">
+					<span class="input_div" style="width:100%;">
+						<a href="#" onclick="return false">비밀번호● ● ● ● ● ●</a>
+					</span>
+					<span class="input_div mt10" style="width:100%;">
+						<a href="#" onclick="return false">비밀번호확인● ● ● ● ● ●</a>
+					</span>
+				</div>
+			</div>
+        </div>
+
+		<div class="group">
+			<div class="sub">
+				<h2 class="title pb0">거래목적 확인</h2>
+				<div>
+					<div class="justify mt20">
+						<p class="subject">실소유자 인가요?</p>
+						<span class="checkbox">
+							<input type="checkbox" id="c3" name=" ">
+							<label for="c3"><span></span>네</label>
+						</span>
+					</div>
+					<div class="justify mt20">
+						<p class="subject" style="width: 70%;">미국인 또는 조세 목적성 해외거주여부</p>
+						<span class="checkbox">
+							<input type="checkbox" id="c4" name=" ">
+							<label for="c4"><span></span>네</label>
+						</span>
+					</div>
+					<div class="justify mt20">
+						<p class="subject">매매명세통보/월간거래내역</p>
+						<span class="checkbox">
+							<input type="checkbox" id="c5" name=" ">
+							<label for="c5"><span></span>온라인조회</label>
+						</span>
+					</div>
+					<div class="justify mt20">
+						<p class="subject">펀드, ELS 운용보고서/잔고통보지</p>
+						<span class="checkbox">
+							<input type="checkbox" id="c6" name=" ">
+							<label for="c6"><span></span>이메일</label>
+						</span>
+						<span class="input mt10" style="width:100%;">
+							<label><input type="text" placeholder="수신 이메일 입력"></label>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">거래목적</h2>
+				<div class="mt15">
+					<span class="select" style="width:100%;">
+						<select class="current">
+							<option value="" disabled="" selected="">거래목적 선택</option>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+						</select>
+					</span>
+				</div>
+			</div>
+
+			<div class="sub">
+				<h2 class="title pb0">거래자금의 원천 및 출처</h2>
+				<div class="mt15">
+					<span class="select" style="width:100%;">
+						<select class="current">
+							<option value="" disabled="" selected="">선택</option>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+						</select>
+					</span>
+				</div>
+			</div>
+
+			<div class="btnArea two outpadding mt20">
+				<a href="#;" class="btn normal">이전</a>
+				<a href="#;" class="btn important">다음</a>
+			</div>
+
+        </div>
+
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

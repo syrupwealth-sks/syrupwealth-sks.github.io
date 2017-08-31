@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>마이피그</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+			
+			<!--//170724fix 
+			<script type="text/javascript">			
+				$(window).scroll(function() {				
+					var scroll = $(window).scrollTop();
+					var scroll2 = $(".scroll_div").position().top;
+					if (scroll > scroll2) {
+						$(".scroll_div .account_select").addClass("showH");
+						$(".scroll_div").addClass("fixed");			
+					} else {
+						$(".scroll_div .account_select").removeClass("showH");
+						$(".scroll_div").removeClass("fixed");	
+					}	  	
+				    return false;
+				});			
+			</script>고정스크롤 삭제  -->
+
+			<div class="scroll_div ">
+				<div class="div_pix">
+					<!--account_select-->			
+					<span class="account_select">
+						<a href="#" id="accountDefault">
+							<i class="picIcn icn2 bg_pig"></i>
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</a>
+						<div id="accountData" class="sub">
+							<ul class="optionList">
+								<li class="name">
+									<span class="text">가족 여행</span>
+									<span class="number">300••••••02</span>
+								</li>
+							</ul>
+							<ul class="optionList">
+								<li class="name">
+									<span class="text">함께 쓰는 통장</span>
+									<span class="number">200••••••02</span>
+								</li>
+							</ul>
+							<ul class="optionList">
+								<li class="name">
+									<span class="text">Let's Go To Spain!</span>
+									<span class="number">100••••••02</span>
+								</li>
+							</ul>
+						</div>
+					</span>
+					<!--//account_select-->		
+				</div>
+			</div>			
+			<!--//170724fix 고정스크롤 처리  -->
+
+			<dl class="info_balance clearfix">
+				<dt><span class="oline">현재잔액</span></dt>
+				<dd>
+					<em class="value">4,140,000</em>
+					<span class="unit">원</span>
+				</dd>
+			</dl>
+
+			<div class="btnArea two">
+				<a href="#" class="btn normal">이체하기</a>
+				<a href="#" class="btn normal">거래상세</a>
+			</div>
+
+		</div><!--//outpadding-->
+
+		<dl class="tab_list clearfix four">
+			<dd>
+				<a href="#" class="focus">전체</a>
+				<a href="#">입금</a>
+				<a href="#">출금</a>
+				<a href="#">이자</a>
+			</dd>
+		</dl>
+
+		<div class="btn_scroll leftpadding">
+			<ul class="clearfix">
+				<li><a href="#" class="btn mini show_search"><i class="icnCal"></i></a></li>
+				<li><a href="#" class="btn mini focus">오늘</a></li>
+				<li><a href="#" class="btn mini">1주일</a></li>
+				<li><a href="#" class="btn mini">1개월</a></li>
+				<li><a href="#" class="btn mini">3개월</a></li>
+				<li><a href="#" class="btn mini">6개월</a></li>
+				<li><a href="#" class="btn mini">12개월</a></li>
+			</ul>
+		</div>
+		<script>
+				$(".show_search").on("click", function (event) {
+					var s_view = $(".box_search").css("display");
+					if ( s_view != "none" ) {
+						$(".box_search").fadeOut();
+					} else {
+						$(".box_search").fadeIn();
+					}
+					return false;
+				});
+		</script>
+		
+		<div class="outpadding">
+			<div class="in_search">
+				<span class="t_gray date">2017.06.10 - 2017.09.10</span>
+				<div class="box_search">
+					<div class="under">
+						<span class="date">2017.09.10</span> - 
+						<span class="date">2017.09.10</span>
+					</div>
+					<a href="#" class="btn normal">조회</a>
+				</div>
+			</div>
+
+			<div class="nonArea">
+				<div class="tb">
+					<div class="cell">
+						<i class="icnNone"></i>
+						<div class="txt">
+							조회내역이 없습니다.					
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<ul class="list normal">
+				<li>
+					<dl class="unit_both red clearfix">
+						<dt class="title">
+							<!-- 170818 텍스트 수정 -->
+							<em class="s_bold">출금</em> 마이로보(Fund)
+							<!--// 170818 텍스트 수정 -->
+							<span class="date">2017.09.10 08:11</span>
+						</dt>
+						<dd class="fr mid">
+							<em class="value">100,000,000</em> <span class="unit">원</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="unit_both red clearfix">
+						<dt class="title">
+							<!-- 170818 텍스트 수정 -->
+							<em class="s_bold">출금</em> 마이로보(ETF)
+							<!--// 170818 텍스트 수정 -->
+							<span class="date">2017.09.10 08:11</span>
+						</dt>
+						<dd class="fr mid">
+							<em class="value">3,000,000</em> <span class="unit">원</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="unit_both blue clearfix">
+						<dt class="title">
+							<em class="s_bold">입금</em> 시럽
+							<span class="date">2017.09.10 08:11</span>
+						</dt>
+						<dd class="fr mid">
+							<em class="value">50,000</em> <span class="unit">원</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="unit_both green clearfix">
+						<dt class="title">
+							<em class="s_bold">이자</em>
+							<span class="date">2017.09.10 08:11</span>
+						</dt>
+						<dd class="fr mid">
+							<em class="value">50,000</em> <span class="unit">원</span>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+
+			<a href="#" class="btn more mt10">거래내역 더보기 <i class="down"></i></a>
+		</div><!--//outpadding-->
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>
+<!--<script>
+
+    $(window).scroll(function() {
+    	var scroll = $(window).scrollTop();
+
+    	if (scroll != 0) {
+    		$(".account_select").removeClass("mt25");
+			$(".account_select").addClass("showH");
+    	} else {
+    		$(".account_select").removeClass("showH");
+			$(".account_select").addClass("mt25");	
+    	}	  	
+        return false;
+    });
+
+</script> 170724fix 삭제-->

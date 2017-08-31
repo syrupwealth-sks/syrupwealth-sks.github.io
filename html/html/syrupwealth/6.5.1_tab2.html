@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>마이로보</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<div class="outpadding">
+
+			<!-- <script type="text/javascript">			
+				$(window).scroll(function() {				
+					var scroll = $(window).scrollTop();
+					var scroll2 = $(".scroll_div").position().top;
+					if (scroll > scroll2) {
+						$(".account_select").addClass("showH");
+						$(".scroll_div").addClass("fixed");			
+					} else {
+						$(".account_select").removeClass("showH");
+						$(".scroll_div").removeClass("fixed");	
+					}	  	
+				    return false;
+				});			
+			</script> 170724fix 삭제 -->
+
+			<div class="scroll_div ">
+				<div class="div_pix">
+					<!--account_select-->			
+					<span class="account_select">
+						<a href="#" id="accountDefault">
+							<i class="picIcn icn2 bg_pig"></i>
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••••02</span>
+						</a>
+						<div id="accountData" class="sub">
+							<ul class="optionList">
+								<li class="name">
+									<span class="text">가족 여행</span>
+									<span class="number">300••••••02</span>
+								</li>
+							</ul>
+							<ul class="optionList">
+								<li class="name">
+									<span class="text">함께 쓰는 통장</span>
+									<span class="number">200••••••02</span>
+								</li>
+							</ul>
+							<ul class="optionList">
+								<li class="name">
+									<span class="text">Let's Go To Spain!</span>
+									<span class="number">100••••••02</span>
+								</li>
+							</ul>
+						</div>
+					</span>
+					<!--//account_select-->		
+				</div>
+			</div>
+
+		</div>
+
+		<div class="summery_section outpadding">
+			<dl class="clearfix">
+				<dt>
+					수익률
+				</dt>
+				<dd>
+					<a href="#">
+						14.5%
+						<i class="right2"></i>
+					</a>		
+				</dd>
+				<dt>
+					평가 손익 
+				</dt>
+				<dd>
+					841,000
+					<span class="won">원</span>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="btnArea two outpadding mt20">
+			<a href="#" class="btn normal">매수하기</a>
+			<a href="#" class="btn normal">매도하기</a>
+		</div>		
+
+		<ul class="tab_menu mt35">
+			<li style="width:33%;">
+				<a href="#">손익</a>
+			</li>	
+			<li  class="focus"  style="width:34%;">
+				<a href="#">수익률</a>
+			</li>					
+			<!-- 170818 텍스트 수정 -->		
+			<li style="width:33%;">
+				<a href="#">잔고</a>					
+			</li>			
+			<!--// 170818 텍스트 수정 -->
+		</ul>		
+
+		<div class="outpadding">
+			<ul class="tab_btn clearfix mt35">
+				<!--<li style="width:50%;"><a href="#" class="btn important">주간 추이</a></li>
+				<li style="width:50%;"><a href="#" class="btn normal">월간 추이</a></li>-->
+				<li style="width:50%;"><a href="#" class="btn normal">주간 추이</a></li>
+				<li style="width:50%;"><a href="#" class="btn important">월간 추이</a></li>				
+			</ul>
+
+			<!--chartmodule-->
+			<div>
+
+				<script type="text/javascript">
+					$(function(){
+						var xCategories = ['17.1','17.2','17.3','17.4','17.5','17.6','17.7','17.8','17.9','17.10','17.11','17.12','17.13','17.14'];//mmddArr
+						var swipe_graph = $("#chart1").highcharts({							
+							chart: {
+								type: 'column'
+							},
+							title: {
+								text: ''
+							},
+							tickInterval:1,
+							xAxis: [{
+								//categories: ['17/1','17/1','17/1','17/1','17/1','17/1','17/1'] //mmddArr,
+								categories: xCategories,
+								min: 0,
+								max: 6
+							}],							
+							yAxis: [{
+								title: {
+									text: null
+								},
+								labels: {
+									format: '{value} 만' //'{value} 만'
+								}
+							}],
+							credits: {
+								enabled: false
+							},
+							legend: {
+								enabled: false
+							},
+							exporting: {
+								enabled: false //export 메뉴삭제
+							},
+							plotOptions : {								
+								series: {
+									dataLabels: {
+										enabled: true,
+										formatter: function() {
+											return this.y+'만원';
+										}
+									}
+								}
+							},
+							series: [
+							    {
+									data: [3, -4, 5, -7, 10, 12, 21, 6, -9, 78, -79, 15, 2, 28],  //gntrValArr
+									color: '#ff7a6c',
+									negativeColor: '#5599ff' //마이너스 컬러
+							    }
+							]
+						});
+
+						/* 01. 초기 로드된 밸류값에서 이동 */
+						$(document).on("click", "#next", function(){							
+							var swipe_graph = 
+								$('#chart1').highcharts();
+								swipe_graph.xAxis[0].setExtremes(7,13);
+						});
+
+						/* $(document).on("click", "#next", function(){//02. 넥스트 밸류값 새로 그려주기
+							var xCategories = ['16.1','16.2','16.3','16.4','16.5','16.6','16.7','16.8','16.9','16.10','16.11','16.12','16.13','16.14'];
+							var swipe_graph = $("#chart1").highcharts({							
+								chart: {
+									type: 'column'
+								},
+								title: {
+									text: ''
+								},
+								tickInterval:1,
+								xAxis: [{
+									//categories: ['17/1','17/1','17/1','17/1','17/1','17/1','17/1'] //mmddArr,								
+									categories: xCategories,
+									min: 0,
+									max: 6
+								}],							
+								yAxis: [{
+									title: {
+										text: null
+									},
+									labels: {
+										format: '{value} 만' //'{value} 만'
+									}
+								}],
+								credits: {
+									enabled: false
+								},
+								legend: {
+									enabled: false
+								},
+								exporting: {
+									enabled: false //export 메뉴삭제
+								},
+								plotOptions : {								
+									series: {
+										dataLabels: {
+											enabled: true,
+											formatter: function() {
+												return this.y+'만원';
+											}
+										}
+									}
+								},
+								series: [
+								    {
+										data: [ -9, 78, -79, 15, 2, 28, 3, -4, 5, -7, 10, 12, 21, 6],  //gntrValArr
+										color: '#ff7a6c',
+										negativeColor: '#5599ff' //마이너스 컬러
+								    }
+								]
+							});
+						}); */
+
+						$(document).on("click", "#prev", function(){
+							var swipe_graph = 
+								$('#chart1').highcharts();
+								swipe_graph.xAxis[0].setExtremes(0,6);
+						});
+
+						/*$(document).on("touchmove", "#next", function(){
+							var swipe_graph = 
+								$('#chart1').highcharts();
+								swipe_graph.xAxis[0].setExtremes(1,6);
+						});*/				
+
+					});
+				</script>
+
+				<div class="chart_div mt25">
+					<div id="chart1" style="width:100%; height:200px;"></div>
+
+					<!-- 샘플 -->
+					<span id="prev" class="btn_chart prev">이전</span> 
+					<span id="next" class="btn_chart next">다음</span>
+					<!--// 샘플 -->
+				</div>
+			</div>
+			<!--//chartmodule-->
+
+		</div><!--//outpadding-->
+
+		<div class="outpadding">
+			<div class="gender_average clearfix mt35">
+				<span class="">
+					<i class="gender women"></i>
+					<!--<i class="gender man"></i>-->
+					고객님과 유사한 30대 남성 수익률 평균은 <em>8.14%</em>입니다.
+				</span>
+			</div>
+
+			<div class="img_bnr mt35">
+				<a href="#"><img src="../../common/sywimg/temp/temp_bnr1.png" alt=""/></a>
+			</div>
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

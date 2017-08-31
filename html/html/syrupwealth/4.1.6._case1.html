@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>포트폴리오 설계</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<!--170724fix in_fixed추가-->
+	<div class="contentArea in_fixed">
+	<!--//170724fix in_fixed추가-->
+
+		<div class="processBar">
+			<span class="text">고객님의 투자목표를 분석했습니다.</span>
+		</div>	
+
+		<!-- 170724fix 상단 차트변경 -->
+		<div class="top_chart outpadding pb25">
+
+			<div class="txt_tl">'고객님은 <mark>안정추구형</mark>입니다.'</div>
+
+			<div class="middle_chart">				
+				<div class="chart">
+					<div class="tl01"> 내 목표수익률 <em><span id="bar1">42.6</span>%</em> <i class="bl_help"></i></div>
+					<div class="tl02"> <span id="bar2">53.8</span>%<em>기대수익률 <i class="bl_help"></i></em> </div>
+					<div class="tl03"> <span id="bar3">3.6</span>%<em>은행예금금리</em> </div>
+					<div class="bar00_bg"></div>
+					<div class="bar00" id="gpbar1">내 목표수익률 bar</div>					
+					<div class="bar01" id="gpbar2">기대수익률 bar</div>
+					<div class="bar02" id="gpbar3">은행예금 금리 bar</div>
+					<script type="text/javascript">
+						$(window).load(function(){
+							var bar_data1 = $("#bar1").text(); //목표수익률							
+							var bar_data2 = $("#bar2").text(); //기대수익률
+							var bar_data3 = $("#bar3").text(); //은행예금 금리
+							var sum_ratio; //상대 비율
+							if(bar_data1 > 100){//목표수익률이 100%를 넘으면
+								sum_ratio = 100/bar_data1;
+								bar_data1 = 100;								
+								bar_data2 = bar_data2 * sum_ratio ;
+								bar_data3 = bar_data3 * sum_ratio ;
+							}
+							if(bar_data2 > 100){//기대수익률이 100%를 넘으면
+								sum_ratio = 100/bar_data2;
+								bar_data2 = 100;								
+								bar_data1 = bar_data1 * sum_ratio ;
+								bar_data3 = bar_data3 * sum_ratio ;
+							}
+							$("#gpbar1").animate({"height": bar_data1 + "%"});
+							$("#gpbar2").animate({"height": bar_data2 + "%"});
+							$("#gpbar3").animate({"height": bar_data3 + "%"});
+						});
+					</script>
+				</div>
+			</div>			
+
+			<span class="i_arrow"></span>
+			<div class="box_basic talk">
+				<span class="s_txt">1년 1개월 동안 100만원을 투자하여 150만원을 모을 계획이시네요. <i class="bl_help"></i> </span>
+
+				<span class="l_txt">설계하신 목표로는 <mark>3만원</mark>의 수익이 예상됩니다.</span>
+
+				<span class="s_txt mt5">달성 가능한 설계 팁을 확인해보세요. <i class="bl_help"></i> </span>
+			</div>			
+
+		</div>
+		<!--// 170724fix 상단 차트변경 -->
+
+		<div class="robo_result pb20">
+			<div class="tit">추천 포트폴리오</div>
+			<div class="outpadding">
+				<!--list_normal-->
+				<ul class="list normal mt10">
+					<li>
+						<span class="tt2"><em class="t_gray"><mark>저위험</mark> 증권 채권형</em> <i class="right2"></i></span>
+						<span class="tt"><em class="normal">TIGER미국 S&amp;500 선물(H)</em></span>						
+						<dl class="unit_both clearfix">
+							<dd class="fl t_gray">100%</dd>
+							<dd class="fr"><em class="value">23,666,500</em> <span class="unit">원</span></dd>
+						</dl>
+					</li>
+					<li>
+						<span class="tt2"><em class="t_gray"><mark>고위험</mark> 해외 채권</em> <i class="right2"></i></span>
+						<span class="tt"><em class="normal">TIGER미국 S&amp;500 선물(H)</em></span>
+						<dl class="unit_both clearfix">
+							<dd class="fl t_gray">100%</dd>
+							<dd class="fr"><em class="value">23,666,500</em> <span class="unit">원</span></dd>
+						</dl>
+					</li>
+					<li>
+						<span class="tt2"><em class="t_gray"><mark>저위험</mark> 증권 채권형</em> <i class="right2"></i></span>
+						<span class="tt"><em class="normal">TIGER미국 S&amp;500 선물(H)</em></span>						
+						<dl class="unit_both clearfix">
+							<dd class="fl t_gray">100%</dd>
+							<dd class="fr"><em class="value">23,666,500</em> <span class="unit">원</span></dd>
+						</dl>
+					</li>
+					<li>
+						<span class="tt2"><em class="t_gray"><mark>고위험</mark> 해외 채권</em> <i class="right2"></i></span>
+						<span class="tt"><em class="normal">TIGER미국 S&amp;500 선물(H) TIGER미국 S&amp;500 선물(H) TIGER미국 S&amp;500 선물(H)</em></span>
+						<dl class="unit_both clearfix">
+							<dd class="fl t_gray">100%</dd>
+							<dd class="fr"><em class="value">23,666,500</em> <span class="unit">원</span></dd>
+						</dl>
+					</li>							
+				</ul>
+				<!--//list_normal-->
+			</div>
+		</div>
+
+		<div class="robo_result">
+			<div class="tit">최근 3년의 시뮬레이션 결과 </div>
+			
+			<!--chartmodule-->
+			<div class="outpadding">
+
+				<script type="text/javascript">
+					$(function(){
+						Highcharts.chart('chart1',{							
+							chart: {
+								type: 'column'
+							},
+							title: {
+								text: ''
+							},
+							xAxis: {
+								//type: 'category',
+								//categories: ['17/1','17/2','17/3','17/4','17/5','17/6','17/7'] //mmddArr								
+								lineWidth:0,
+								minorGridLineWidth:0,
+								lineColor:'transparent',
+								labels: {
+									enabled: false
+								},
+								minorTickLength:0,
+								tickLength:0
+							},
+							yAxis: {
+								title: {
+									text: null
+								},
+								labels: {
+									format: '{value} 만' //'{value} 만'
+								}
+							},
+							credits: {
+								enabled: false
+							},
+							legend: {
+								enabled: false
+							},
+							exporting: {
+								enabled: false //export 메뉴삭제
+							},
+							plotOptions : {								
+								series: {
+									dataLabels: {
+										enabled: true,
+										formatter: function() {
+											return this.y+'만원';
+										}
+									}
+								}
+							},
+							series: [
+							    {
+									data: [3, -4, 5, -7, 10, 12, 21],  //gntrValArr
+									color: '#ff7a6c',
+									negativeColor: '#5599ff' //마이너스 컬러
+							    }
+							]
+						});
+
+					});
+				</script>
+
+				<div class="chart_div mt25">
+					<div id="chart1" style="width:100%; height:200px;"></div>
+				</div>
+			</div>
+			<!--//chartmodule-->
+
+			<ul class="waring_list outpadding">
+				<li>							
+					<span><i class="waring"></i> 위 수익률은 분기 단위 시뮬레이션 결과로, 미래 결과를 보장하지 않습니다.</span>
+				</li>
+			</ul>			
+		</div>
+
+		<!-- 170724fix 버튼 및 아이콘변경 -->
+		<div class="btnArea outpadding two">			
+			<a href="#" class="btn normal"> <i class="icnPort link1"></i> 통장 만들기</a>			
+			<a href="#" class="btn important"> <i class="icnPort link2"></i> 문자로 받기</a>			
+		</div>
+		<!--// 170724fix 버튼 및 아이콘변경 -->
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

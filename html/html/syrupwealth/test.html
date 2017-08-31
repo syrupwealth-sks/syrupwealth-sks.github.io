@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+
+
+
+
+<script>
+
+var template = '<ul class="optionList">'
+			 + '	<li class="name">'
+			 + '		<span class="text">가족여행</span>'
+			 + '		<span class="number">300••••••02</span>'
+			 + '	</li>'
+			 + '</ul>';
+
+</script>
+
+<script>
+
+$(function () {
+
+    $("a.btn.add").on("click", function (event) {
+        var e = event || window.event;
+        e.preventDefault();
+        $("#accountData").append(template);
+        $(".account_select").trigger("accSelectSet");
+    });
+
+
+    $(".account_select").on("accSelectSet", function () {
+
+        $("a", $(this)).off("accountSelect").on("accountSelect", function() {//계좌선택 셀렉트박스
+            $(this).off("click").on("click", function() {
+                $(this).addClass("focus");
+                $(this).next().slideToggle(10);
+                return false;
+            });
+            $(this).off("blur").on("blur", function() {
+                $(".account_select a").removeClass("focus");
+            });
+        }).trigger("accountSelect");
+
+        $(".optionList li", $(this)).off("accountLiSelect").on("accountLiSelect", function() {//계좌선택 셀렉트박스
+            $(this).off("click").on("click", function() {
+                var option_txt1 = $(this).find(".text").text();
+                var option_txt2 = $(this).find(".number").text();
+                var option_id = $(this).attr("id");
+                if(option_id != undefined && option_id != ""){
+                    $(this).parent().parent().parent().find("a .number").attr("id", option_id);
+                }
+                $(this).parent().parent().find("li").removeClass("on");
+                $(this).addClass("on");//option focus
+                $(this).parent().parent().parent().find("a").addClass("focus");//select focus
+                $(this).parent().parent().parent().find("a .text").text(option_txt1);
+                $(this).parent().parent().parent().find("a .number").text(option_txt2);
+                $(this).parent().parent().slideToggle(10);
+                return false;
+            });
+        }).trigger("accountLiSelect");
+
+        $(".account_select").off("accountSelLeave").on("accountSelLeave", function() {//계좌선택 셀렉트박스 Leave
+            $(this).off("mouseleave").on("mouseleave", function() {
+                $(this).find(".sub").slideUp(10);
+            });
+        }).trigger("accountSelLeave");
+
+    }).trigger("accSelectSet");
+
+    ////// account_select 계좌선택 - START
+    //end
+    //$(".account_select a").triggr("accountSelect");//재사용시
+
+    //end
+    //$(".account_select .optionList li").triggr("accountLiSelect");//재사용시
+
+    ;//end
+    //$(".account_select .optionList li").triggr("accountSelLeave");//재사용시
+    ////// account_select 계좌선택 - END
+
+});
+
+
+</script>
+
+
+</head>
+<body>
+
+    <div class="contentArea">
+
+        <div class="outpadding">
+
+            <span class="account_select">
+                <a href="#" id="accountDefault" class="">
+                    <i class="picIcn icn1"></i>
+                    <span class="text">Let's Go To Spain!</span>
+                    <span class="number">100••••••02</span>
+                </a>
+                <div id="accountData" class="sub" style="display: none;">
+                    <ul class="optionList">
+                        <li class="name">
+                            <span class="text">가족 여행</span>
+                            <span class="number">300••••••02</span>
+                        </li>
+                    </ul>
+                    <ul class="optionList">
+                        <li class="name">
+                            <span class="text">함께 쓰는 통장</span>
+                            <span class="number">200••••••02</span>
+                        </li>
+                    </ul>
+                    <ul class="optionList">
+                        <li class="name">
+                            <span class="text">Let's Go To Spain!</span>
+                            <span class="number">100••••••02</span>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
+            <div class="btnArea mt30">
+                <a href="#" class="btn important add">리스트 추가</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

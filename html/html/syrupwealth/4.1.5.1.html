@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>포트폴리오 설계</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea in_fixed">
+
+		<div class="chatArea clearfix outpadding">			
+
+			<div class="chatboxArea left">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					알고 계신 <mark>상품</mark>이 있나요?
+				</div>
+				<span class="digonalBorder_bottom"></span>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="a1" name="ra"/>
+							<label for="a1"><span></span>예ㆍ적금만 알아요 </label>
+						</li>
+						<li>
+							<input type="radio" id="a2" name="ra"/>
+							<label for="a2"><span></span>주식,채권,펀드 등 조금 알아요</label>
+						</li>
+						<li>
+							<input type="radio" id="a3" name="ra"/>
+							<label for="a3"><span></span>주식,채권,펀드 등 많이 알아요</label>
+						</li>
+						<li>
+							<input type="radio" id="a4" name="ra"/>
+							<label for="a4"><span></span>주식, 채권, 펀드, 파생상품까지 다 알아요</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					무엇이 가장 <mark>중요</mark>하세요?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="b1" name="rb"/>
+							<label for="b1"><span></span> 무조건 원금 보장</label>
+						</li>
+						<li>
+							<input type="radio" id="b2" name="rb"/>
+							<label for="b2"><span></span> 가능하면 원금 보장</label>
+						</li>
+						<li>
+							<input type="radio" id="b3" name="rb"/>
+							<label for="b3"><span></span> 가능하면 수익 추구</label>
+						</li>
+						<li>
+							<input type="radio" id="b4" name="rb"/>
+							<label for="b4"><span></span> 최대한 수익 추구</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					가장 <mark>많이 투자해 본 상품</mark>을 알려주세요.
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="c1" name="rc"/>
+							<label for="c1"><span></span>예적금 등 현금성 자산</label>
+						</li>
+						<!-- 170818 텍스트 수정-->
+						<li>
+							<input type="radio" id="c2" name="rc"/>
+							<label for="c2"><span></span>채권, 채권형 펀드</label>
+						</li>
+						<li>
+							<input type="radio" id="c3" name="rc"/>
+							<label for="c3"><span></span>주식, 주식형 펀드</label>
+						</li>
+						<li>
+							<input type="radio" id="c4" name="rc"/>
+							<label for="c4"><span></span>파생 상품, 파생형 펀드</label>
+						</li>
+						<!--// 170818 텍스트 수정-->
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<mark>손실이 난다면</mark> 어떻게 하시겠나요?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="d1" name="rd"/>
+							<label for="d1"><span></span>모두 팔아요 </label>
+						</li>
+						<li>
+							<input type="radio" id="d2" name="rd"/>
+							<label for="d2"><span></span>일부만 팔아요</label>
+						</li>
+						<li>
+							<input type="radio" id="d3" name="rd"/>
+							<label for="d3"><span></span>지켜볼게요</label>
+						</li>
+						<li>
+							<input type="radio" id="d4" name="rd"/>
+							<label for="d4"><span></span>더 살게요</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="chatboxArea left mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<mark>어떻게 투자</mark>하는게 좋을까요?
+				</div>
+			</div>
+
+			<div class="chatboxArea right mt25">
+				<span class="digonalBorder_top"></span>
+				<div class="chatbox">
+					<!-- 170724fix 리스트 항목이 5개에서 4개로 수정 -->
+					<ul class="check_list">
+						<li>
+							<input type="radio" id="e1" name="re"/>
+							<label for="e1"><span></span>수익5% ~ 손실-5% 까지 허용</label>
+						</li>
+						<li>
+							<input type="radio" id="e2" name="re"/>
+							<label for="e2"><span></span>수익10% ~ 손실-10% 까지 허용</label>
+						</li>
+						<li>
+							<input type="radio" id="e3" name="re"/>
+							<label for="e3"><span></span>수익20% ~ 손실-20% 까지 허용</label>
+						</li>
+						<li>
+							<input type="radio" id="e4" name="re"/>
+							<label for="e4"><span></span>수익30% ~ 손실-30% 까지 허용</label>
+						</li>
+					</ul>
+					<!--// 170724fix 리스트 항목이 5개에서 4개로 수정 -->
+				</div>
+			</div>
+
+			<div class="btnArea two floatR clearfix">
+				<a href="#" class="btn normal">이전</a>
+				<a href="#" class="btn important">결과보기</a>				
+			</div>
+
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

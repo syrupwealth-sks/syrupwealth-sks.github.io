@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+<title> Syrub Membership Wealth </title>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+<!--js-->
+<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>매매내역</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+		<!--processBar-->
+		<div class="processBar">
+			매매내역을 조회하실 수 있습니다.
+		</div>
+		<!--//processBar-->
+		<div class="outpadding">
+			<!--account_select-->
+			<span class="account_select">
+				<a href="#" id="accountDefault">
+					<i class="picIcn icn1"></i>
+					<span class="text">Let's Go To Spain!</span>
+					<span class="number">100••••02</span>
+				</a>
+				<div id="accountData" class="sub">
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">가족 여행</span>
+							<span class="number">300••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">함께 쓰는 통장</span>
+							<span class="number">200••••02</span>
+						</li>
+					</ul>
+					<ul class="optionList">
+						<li class="name">
+							<span class="text">Let's Go To Spain!</span>
+							<span class="number">100••••02</span>
+						</li>
+					</ul>
+				</div>
+			</span>
+			<!--//account_select-->
+		</div><!--//outpadding-->
+
+		<div class="btn_scroll leftpadding">
+			<ul class="clearfix">
+				<li><a href="#" class="btn mini show_search"><i class="icnCal"></i></a></li>
+				<li><a href="#" class="btn mini">오늘</a></li>
+				<li><a href="#" class="btn mini">1주일</a></li>
+				<li><a href="#" class="btn mini">1개월</a></li>
+				<li><a href="#" class="btn mini focus">3개월</a></li>
+				<li><a href="#" class="btn mini">6개월</a></li>
+				<li><a href="#" class="btn mini">12개월</a></li>
+			</ul>
+		</div>
+		<script>
+				$(".show_search").on("click", function (event) {
+					var s_view = $(".box_search").css("display");
+					if ( s_view != "none" ) {
+						$(".box_search").fadeOut();
+					} else {
+						$(".box_search").fadeIn();
+					}
+					return false;
+				});
+		</script>
+		
+		<div class="outpadding">
+			<div class="in_search">
+				<span class="t_gray date">2017.06.10 - 2017.09.10</span>
+				<div class="box_search">
+					<div class="under">
+						<span class="date">2017.09.10</span> - 
+						<span class="date">2017.09.10</span>
+					</div>
+					<a href="#" class="btn normal">조회</a>
+				</div>
+			</div>
+			
+			<div id=""><!--데이타가 있을때-->
+				<!--list_basic-->
+				<div class="box_plate shadow">
+					<!--오늘이 아닐때-->
+					<span class="date">2017.06.10</span>
+					<!--//오늘이 아닐때-->
+					<ul class="list_basic">
+						<li>
+							<em>매도</em>
+							<span class="fl title bold">동양하이플러스채권증권자1호-A3 (채권)</span>
+						</li>
+						<li>
+							<em>체결단가</em>
+							<span class="fr">
+								<em class="blue value">100,000</em>
+								<span class="unit">&nbsp;원</span>
+							</span>
+						</li>
+						<li>
+							<em>체결수량</em>
+							<span class="fr">
+								<span class="value">5</span>
+								<span class="unit">주</span>
+							</span>
+						</li>
+					</ul>
+
+					<ul class="list_basic">
+						<li>
+							<em>매수</em>
+							<span class="fl title bold">동양하이플러스채권증권자1호-A3 (채권)</span>
+						</li>
+						<li>
+							<em>체결단가</em>
+							<span class="fr">
+								<em class="red value">100,000</em>
+								<span class="unit">&nbsp;원</span>
+							</span>
+						</li>
+						<li>
+							<em>체결수량</em>
+							<span class="fr">
+								<span class="value">5</span>
+								<span class="unit">주</span>
+							</span>
+						</li>
+						<li>
+							<em>미체결단가</em>
+							<span class="fr">
+								<span class="value">10,000</span><span class="unit">원</span>
+							</span>
+						</li>
+						<li>
+							<em>미체결수량</em>
+							<span class="fr">
+								<span class="value">1</span>
+								<span class="unit">주</span>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<!--//list_basic-->
+
+				<div class="btnArea mt25">
+					<a href="#" class="btn important">일괄취소</a>
+				</div>
+			</div><!--//데이타가 있을때-->
+
+			<div class="nonArea">
+				<div class="tb">
+					<div class="cell">
+						<i class="icnNone"></i>
+						<div class="txt">
+							조회내역이 없습니다.					
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div><!--//outpadding-->
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

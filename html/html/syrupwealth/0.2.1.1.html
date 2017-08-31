@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+
+<style>
+
+</style>
+
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>이벤트</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea">
+
+		<!--
+			권장 이미지 사이즈 620px * 203px
+		-->
+
+		<!--<div class="outpadding alignC mt25">
+			종료된 이벤트 입니다.
+		</div> 종료된 이벤트인경우 -->
+
+		<div class="event_view">
+			<figure class="img_wrap">
+				<span class="img" style="background-image: url(../../common/sywimg/temp/sp2.png);" id="eventImage"></span>
+			</figure>
+		</div>
+
+		<!-- 170724fix 참여하기 버튼 -->
+		<div class="outpadding ">
+			<a href="#" class="btn important"> 참여하기</a>
+		</div>
+		<!--// 170724fix 참여하기 버튼 -->
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+<script>
+
+//이미지 비율 자동으로 구하기
+var imageRatio = function () {
+	var src = $("#eventImage").css("background-image").replace(/url\(|\)|\"/gi, "");//쌍따옴표, url() string 제거
+	var $newImg = $(new Image());
+	var $target = $(".img_wrap");
+	var viewWidth = $target.width();
+	var size = {};
+
+	$newImg.attr({src: src})
+	.on("load", function () {
+		var img = $newImg[0];
+		if ( src != "" && img.complete ) {
+			size.w = img.naturalWidth;
+			size.h = img.naturalHeight;
+			$target.css({
+				paddingBottom: (size.h * 100) / size.w + "%"
+			});
+		}
+	})
+	.on("error", function (){
+		alert("이미지를 불러올 수 없습니다.");
+	});
+
+};
+
+document.addEventListener("DOMContentLoaded", imageRatio, false);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detaction" content="telephone=no, address=no, email=no">
+	<title> Syrub Membership Wealth </title>
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../common/sywcss/contents.css" />
+	<!--js-->
+	<script type="text/javascript" src="../../common/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-more.js"></script>
+	<script type="text/javascript" src="../../common/js/highcharts-exporting.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<!--###### wrap ######-->
+<div class="wrap">
+
+	<!--## titlArea ##-->
+	<div class="pageTitle">
+		<i class="pageBack"></i>
+		<span>시럽 와플</span>
+	</div>
+	<!--##// titlArea ##-->
+
+	<!--## contentArea ##-->
+	<div class="contentArea pb0">
+
+		<div class="note group">
+			<div class="outpadding mt10 pb10">
+				<div class="search_input clearfix">
+					<label><input type="text" placeholder="텍스트를 입력하세요" value=""></label>
+					<a href="#" class="search_cancel">검색어 취소</a>
+					<a href="#" class="search_submit">검색</a>
+					<!-- 자동완성 주석처리
+					<div class="sub">
+						<ul class="optionList">
+							<li class="name">option 1</li>
+						</ul>
+						<ul class="optionList">
+							<li class="name">option 2</li>
+						</ul>
+						<ul class="optionList">
+							<li class="name">option 3</li>
+						</ul>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+
+		<div class="group">
+			<div class="sub pb0">
+				<!-- 검색 결과가 없을 경우 건수는 "0건" 으로 표기 -->
+				<h2 class="title pb0">‘버거킹’ 검색결과 <span class="txt_purple">450건</span></h2>
+				<!-- <span class="div_select mt20" style="width:100%;">
+					<a href="#" id="optionDefault1" class="">관심종목</a>
+				</span> 170724fix 삭제처리 -->
+			</div>
+		</div>
+
+		<div class="board_list">
+
+			<!-- 검색결과가 없을 경우 -->
+			<div class="no_data mt20">
+				<div class="nonArea">
+					<div class="tb">
+						<div class="cell">
+							<i class="icnNone"></i>
+							<div class="txt">검색 결과를 찾을 수 없습니다</div>
+						</div>
+					</div>
+				</div>
+				<div class="desc_box mt15">
+					<p class="txt"><mark>아래와 같은 조합</mark>으로검색해보세요.</p>
+					<ul class="normal_list" data-col="1">
+						<li>단어의 철자가 정확한지 확인해보세요</li>
+						<li>한글을 영어로 혹은 영어를 한글로 입력해보세요.</li>
+						<li>두 단어 이상의 검색어인 경우, 띄어쓰기를 변경해보세요.</li>
+					</ul>
+				</div>
+			</div>
+			<!--// 검색결과가 없을 경우 -->
+
+			<ul>
+				<!-- 디자인 변경 전
+				<li>
+					<a href="#" class="item">
+						<figure class="img_wrap">
+							<img src="../../common/sywimg/temp/temp_boardlist_img.png" alt="게시물 제목">
+							<span class="like_cnt">5,140</span>
+						</figure>
+						<span class="list_content">
+							<span class="category">Small Cap Insight</span>
+							<span class="subject mt10">광통신과 빛나는 종목</span>
+							<span class="writer mt15">SK증권 리서치센터 나승두 연구위원</span>
+						</span>
+					</a>
+				</li>
+				-->
+				<li>
+					<!--
+						개발 전달
+						- 화면상에서 제목줄이 한줄이상이면 css상에서 말줄임 처리됨
+						- 화면상에서 내용 영역이 2줄 이상이면 css상에서 말줄임 처리됨
+					-->
+					<a href="#" class="item">
+						<figure class="img_wrap">
+							<img src="../../common/sywimg/temp/temp_boardlist_img.png" alt="게시물 제목">
+							<span class="like_cnt">5,140</span>
+						</figure>
+						<span class="list_content">
+							<span class="subject">제도 개선을 통한 원활한 자금 조달 가능</span>
+							<span class="some_words">동해물과 백두산이 아름답고 하느님께서 우리를 보우하사 나라가 강해지고 편안해지고 있다. 무궁화가 지천에 피어 있으며 강산마저 화려하니</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="item">
+						<figure class="img_wrap">
+							<img src="../../common/sywimg/temp/temp_boardlist_img.png" alt="게시물 제목">
+							<span class="like_cnt">5,140</span>
+						</figure>
+						<span class="list_content">
+							<span class="subject">제도 개선을 통한 원활한 자금 조달 가능</span>
+							<span class="some_words">동해물과 백두산이 아름답고 하느님께서 우리를 보우하사 나라가 강해지고 편안해지고 있다. 무궁화가 지천에 피어 있으며 강산마저 화려하니</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="item">
+						<figure class="img_wrap">
+							<img src="../../common/sywimg/temp/temp_boardlist_img.png" alt="게시물 제목">
+							<span class="like_cnt">5,140</span>
+						</figure>
+						<span class="list_content">
+							<span class="subject">제도 개선을 통한 원활한 자금 조달 가능</span>
+							<span class="some_words">동해물과 백두산이 아름답고 하느님께서 우리를 보우하사 나라가 강해지고 편안해지고 있다. 무궁화가 지천에 피어 있으며 강산마저 화려하니</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="item">
+						<figure class="img_wrap">
+							<img src="../../common/sywimg/temp/temp_boardlist_img.png" alt="게시물 제목">
+							<span class="like_cnt">5,140</span>
+						</figure>
+						<span class="list_content">
+							<span class="subject">제도 개선을 통한 원활한 자금 조달 가능</span>
+							<span class="some_words">동해물과 백두산이 아름답고 하느님께서 우리를 보우하사 나라가 강해지고 편안해지고 있다. 무궁화가 지천에 피어 있으며 강산마저 화려하니</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+			<a href="#" class="btn more">검색결과 더보기 <i class="down"></i></a>
+		</div>
+
+	</div>
+	<!--##// contentArea ##-->
+
+</div>
+<!--###### wrap ######-->
+
+</body>
+</html>

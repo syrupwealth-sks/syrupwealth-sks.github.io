@@ -1,6 +1,76 @@
+(function ($){
+	var
+		  ns		= (new Date).getTime()
+		, special	= $.event.special
+		, dispatch	= $.event.handle || $.event.dispatch
+
+		, scroll		= 'scroll'
+		, scrollStart	= scroll + 'start'
+		, scrollEnd		= scroll + 'end'
+		, nsScrollStart	= scroll +'.'+ scrollStart + ns
+		, nsScrollEnd	= scroll +'.'+ scrollEnd + ns
+	;
+
+	special.scrollstart = {
+		setup: function (){
+			var pid, handler = function (evt/**$.Event*/){
+				if( pid == null ){
+					evt.type = scrollStart;
+					dispatch.apply(this, arguments);
+				}
+				else {
+					clearTimeout(pid);
+				}
+
+				pid = setTimeout(function(){
+					pid = null;
+				}, special.scrollend.delay);
+
+			};
+
+			$(this).bind(nsScrollStart, handler);
+		},
+
+		teardown: function (){
+			$(this).unbind(nsScrollStart);
+		}
+	};
+
+	special.scrollend = {
+		delay: 300,
+
+		setup: function (){
+			var pid, handler = function (evt/**$.Event*/){
+				var _this = this, args = arguments;
+
+				clearTimeout(pid);
+				pid = setTimeout(function(){
+					evt.type = scrollEnd;
+					dispatch.apply(_this, args);
+				}, special.scrollend.delay);
+
+			};
+
+			$(this).bind(nsScrollEnd, handler);
+
+		},
+
+		teardown: function (){
+			$(this).unbind(nsScrollEnd);
+		}
+	};
+
+
+	$.isScrolled = false;
+	$(window).bind(scrollStart+' '+scrollEnd, function (evt/**Event*/){
+		$.isScrolled = (evt.type == scrollStart);
+		$('body')[$.isScrolled ? 'addClass' : 'removeClass']('is-scrolled');
+	});
+})();
+
+
 //스크롤시 top버튼
 $(function(){
-	$("body").append("<span class='btn_top_move'></span>");
 	$(".btn_top_move").on("topBtnClick", function() {//170724fix top버튼
 		$(this).off("click").on("click", function() {
 			$('html, body').stop().animate({scrollTop: 0}, 250);
@@ -11,12 +81,20 @@ $(function(){
 
 });
 
-$(window).scroll(function(){
+$(window).on('scrollend', function(){
 	var posF = $(document).scrollTop();
-	if( posF > 360){
-		$(".btn_top_move").css("display","block");
+	var flag = true;
+	var end = 400;
+	if( posF > end){
+		flag = false;
+		$('body').append('<span class="btn_top_move"></span>');
+		$(".btn_top_move").triggr("topBtnClick");
+		if ( $('.btn_top_move:visible').length == 0 ) {
+			$(".btn_top_move").css("display","block");
+		}
 	}else{
-		$(".btn_top_move").css("display","none");
+		flag = true;
+		$(".btn_top_move").remove();
 	}
 });//end
 

@@ -1,4 +1,4 @@
-(function ($){
+(function (){
 	var
 		  ns		= (new Date).getTime()
 		, special	= $.event.special

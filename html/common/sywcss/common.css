@@ -28,8 +28,7 @@ body{
 	-ms-user-select: none;
 	user-select: none;
 	font-family: 'Noto Sans Korean', sans-serif; 
-	font-size:15px; 
-	word-break: keep-all;
+	font-size:15px;
 }
 
 * {margin:0; padding:0; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); word-break: keep-all;}

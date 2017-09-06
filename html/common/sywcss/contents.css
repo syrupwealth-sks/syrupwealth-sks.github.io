@@ -692,7 +692,7 @@ strong{font-weight:500;}
 .info_balance dd {float:right;}
 .info_balance dd em.value {font-size:30px;font-weight: 500;}
 .info_balance dd span.unit {font-size: 11px;margin-left:3px;}
-.info_balance.flex {display: flex;}
+.info_balance.flex {display: flex; justify-content: space-between; align-items: center;}
 .info_balance.flex dt, .info_balance.flex dt {display: inherit; float: none;}
 .info_balance.flex dt {flex-direction: column;}
 .info_backgreen {background-color: #dbf7f1;padding:15px 24px;color:#1cbf9f;margin-top: 15px;}

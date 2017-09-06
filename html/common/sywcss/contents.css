@@ -450,7 +450,7 @@ strong{font-weight:500;}
 /*gep*/
 .l_block {display: inline-block;margin:0 15px;}
 .list_check + .outpadding {margin-top: 25px;}
-.info_balance.clearfix + .btnArea.two {margin-top:35px;}
+.info_balance.clearfix + .btnArea.two, .info_balance.flex + .btnArea.two {margin-top:35px;}
 .btn_scroll.leftpadding {padding-left:25px;box-sizing: border-box;}
 .box_basic + .box_basic {margin-top:15px;}
 .box_plate + .box_plate {margin-top:15px;}

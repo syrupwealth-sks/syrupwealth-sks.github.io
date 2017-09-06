@@ -697,6 +697,7 @@ strong{font-weight:500;}
 .info_balance.flex dt {width: 20%;}
 .info_balance.flex dd {width: 79%; justify-content: flex-end;}
 .info_balance.flex dt {flex-direction: column;}
+.info_balance.flex dd em.value {line-height: 30px;}
 .info_backgreen {background-color: #dbf7f1;padding:15px 24px;color:#1cbf9f;margin-top: 15px;}
 .info_backgreen dt {float:left;font-size:13px;font-weight: 500;line-height: 22px;}
 .info_backgreen dd {float:right;}
